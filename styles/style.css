@@ -1,0 +1,159 @@
+.hero{
+    height: 100vh;
+    background-image: url('../images/360_F_29133877_bfA2n7cWV53fto2BomyZ6pyRujJTBwjd.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+
+.header-wrapper{
+    padding: 20px;
+    position: sticky;
+}
+
+.header-elements{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation{
+    display: block;
+}
+.ul-elements{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    color: aliceblue;
+}
+
+.burger-bar{   
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 50%;
+    position: relative;
+    visibility: hidden;
+}
+
+.burger-bar div{
+    background-color: #fff;
+    height: 2px;
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.upper{
+    top: 30%;
+}
+
+.mid{
+    top: 50%;
+}
+
+.lower{
+    top: 70%;
+}
+
+.welcome-txt{
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -ms-transform: translate(-90%, -50%);
+    transform: translate(-90%, -50%);
+}
+
+.lower-btns{
+    width: 80px;
+    height: 150px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.registration-button{
+    width: 135px;
+    height: 40px;
+    background: skyblue;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+}
+
+.scroll-btn{
+    margin: 0 auto;
+    position: absolute;
+    top: 80%;
+}
+
+.info{
+    padding-top: 3em;
+    width: 100%;
+    display: block;
+    gap: 20px;
+}
+
+.description{
+    max-width: 1980px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.3em;
+}
+
+.description-txt{
+    width: 50%;
+    text-align: center;
+}
+
+.usr-story{
+    max-width: 1980px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.usr-story-txt{
+    text-align: center;
+}
+
+.endnote{
+    padding-top: 2.5em;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-wrap{
+    width: 100%;
+    background-color: blue;
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-sec{
+    margin: 3em 0;
+    padding: 0 2em;
+}
+
+.footer-sec li{
+    padding-top: 1em;
+}
+
