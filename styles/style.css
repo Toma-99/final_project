@@ -30,13 +30,25 @@
     color: aliceblue;
 }
 
+.login-btn{
+    width: 100px;
+    height: 40px;
+    background: darkgoldenrod;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+}
+
 .burger-bar{   
     width: 40px;
     height: 40px;
     background-color: #000;
     border-radius: 50%;
     position: relative;
-    visibility: hidden;
+    display: none;
 }
 
 .burger-bar div{
@@ -197,7 +209,7 @@
     padding: 2.5em;
 }
 
-.history-imgs{
+.history-imgs ul{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -247,4 +259,90 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.hero-last{
+    height: auto;
+    background-color: cadetblue;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.contact-welcome{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5em;
+}
+
+.support-wrap{
+    margin-top: 3em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.welcome-support-txt{
+    width: 80%;
+    margin: 0 auto;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.main-support{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.footer-submit{
+    background-color: aqua;
+}
+
+.main-addresses ul{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.book-form{
+    display: no;
 }
