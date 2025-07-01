@@ -38,6 +38,101 @@
             Et sapiente voluptate quibusdam sunt, voluptas laborum.
             </p>
         </div>
+        <div class="pop-up-wrapper">
+            <div class="pop-up">
+              <button class="close-btn" aria-label="Close Booking Form">
+                &times;
+              </button>
+              <div class="suggest">
+                <h3>please fill the form</h3>
+                <p>or login</p>
+              </div>
+              <form class="book-form">
+                <div class="errors-container"></div>
+                <div class="outer">
+                <div class="input-container">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    maxlength="25"
+                    required
+                  />
+                </div>
+                <div class="input-container">
+                  <label for="surname">Surname</label>
+                  <input
+                    type="text"
+                    id="surname"
+                    name="surname"
+                    maxlength="25"
+                    required
+                  />
+                </div>
+            </div>
+            <div class="outer">
+                <div class="input-container">
+                    <label for="tel"> Phone number</label>
+                    <input type="tel" id="tel" name="tel" maxlength="15" required />
+                  </div>
+                <div class="input-container">
+                  <label for="email"> Email:</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+            </div>
+            <div class="outer">
+    
+                <div class="input-container">
+                    <label for="persons"> Pesrsons (3 max) </label>
+                    <input
+                      type="number"
+                      id="persons"
+                      name="persons"
+                      min="0"
+                      max="3"
+                      required
+                    />
+                  </div>
+                <div class="input-container">
+                  <label for="Room">Room</label>
+                  <select id="room" name="room" required>
+                    <option value="">Select Room</option>
+                    <option value="room1">Room 1</option>
+                    <option value="room2">Room 2</option>
+                    <option value="room3">Room 3</option>
+                    <option value="room4">Room 4</option>
+                  </select>
+                </div>
+            </div>
+            <div class="outer">
+                <div class="input-container">
+                  <label for="checkin">Check in</label>
+                  <input type="date" id="checkin" name="checkin" required />
+                </div>
+                <div class="input-container">
+                  <label for="checkout">Check Out</label>
+                  <input type="date" id="checkout" name="checkout" required />
+                </div>
+            </div>
+            <div class="outer">
+                <div class="price">
+                    Total Price: <strong>$0.00</strong>
+                </div>
+                <div class="input-container">
+                    <label>
+                        <input type="checkbox" name="terms" required />
+                        I agree to the <a href="#">terms and conditions</a>
+                    </label>
+                </div>
+                <div class="btn-container">
+                  <button type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
+        </div>
+    </div>
+    </div>
         <div class="lower-btns">
             <div class="registration-button">
                 <img src="./images/Group 37.png" alt="register" class="reg-img">
@@ -67,10 +162,10 @@
             </div>
             <div class="hitory-imgs">
                 <ul>
-                <li><img src="" alt="img1"></li>
-                <li><img src="" alt="img2"></li>
-                <li><img src="" alt="img2"></li>
-                <li><img src="" alt="img2"></li>
+                    <li><img src="" alt="img1"></li>
+                    <li><img src="" alt="img2"></li>
+                    <li><img src="" alt="img2"></li>
+                    <li><img src="" alt="img2"></li>
                 </ul>
             </div>
         </div>

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/booking.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -22,8 +22,8 @@
                         <li><a href="./contact_us.html">Contact Us</a></li>
                     </ul>
                 </nav>
-                <div class="login-btn btn">Log In</div>
-                <div class="burger-bar">
+                <div class="login-btn btn" role="button" tabindex="0" onclick="handleClick(event)">Log In</div>
+                <div class="burger-bar" role="button" tabindex="0" onclick="handleClick(event)">
                     <div class="upper"></div>
                     <div class="mid"></div>
                     <div class="lower"></div>
@@ -38,25 +38,116 @@
             Et sapiente voluptate quibusdam sunt, voluptas laborum.
             </p>
         </div>
+        <div class="pop-up-wrapper">
+            <div class="pop-up">
+              <button class="close-btn" aria-label="Close Booking Form">
+                &times;
+              </button>
+              <div class="suggest">
+                <h3>please fill the form</h3>
+                <p>or login</p>
+              </div>
+              <form class="book-form">
+                <div class="errors-container"></div>
+                <div class="outer">
+                <div class="input-container">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="usernamefield"
+                    name="name"
+                    maxlength="25"
+                    required
+                  />
+                  <p class="error-text" id="error-username"></p>
+                </div>
+                <div class="input-container">
+                  <label for="surname">Surname</label>
+                  <input
+                    type="text"
+                    id="surnamefield"
+                    name="surname"
+                    maxlength="25"
+                    required
+                  />
+                  <p class="error-text" id="error-surname"></p>
+                </div>
+            </div>
+            <div class="outer">
+                <div class="input-container">
+                    <label for="tel"> Phone number</label>
+                    <input type="tel" id="telfield" name="tel" maxlength="15" required />
+                    <p class="error-text" id="error-tel"></p>
+                  </div>
+                <div class="input-container">
+                  <label for="email"> Email:</label>
+                  <input type="email" id="emailfield" name="email" required />
+                  <p class="error-text" id="error-email"></p>
+                </div>
+            </div>
+            <div class="outer">
+    
+                <div class="input-container">
+                    <label for="persons"> Pesrsons (3 max) </label>
+                    <input
+                      type="number"
+                      id="personsfield"
+                      name="persons"
+                      min="0"
+                      max="3"
+                      required
+                    />
+                    <pclass="error-text" id="error-persons"></p>
+                  </div>
+                <div class="input-container">
+                  <label for="Room">Room</label>
+                  <select id="roomfield" name="room" required>
+                    <option value="">Select Room</option>
+                    <option value="room1">Room 1</option>
+                    <option value="room2">Room 2</option>
+                    <option value="room3">Room 3</option>
+                    <option value="room4">Room 4</option>
+                  </select>
+                  <p class="error-text" id="error-room"></p>
+                </div>
+
+            </div>
+            <div class="outer">
+                <div class="input-container">
+                  <label for="checkin">Check in</label>
+                  <input type="date" id="checkinfield" name="checkin" required />
+                  <p class="error-text" id="error-checkin"></p>
+                </div>
+                <div class="input-container">
+                  <label for="checkout">Check Out</label>
+                  <input type="date" id="checkoutfield" name="checkout" required />
+                  <p class="error-text" id="checkout"></p>
+                </div>
+            </div>
+            <div class="outer">
+                <div class="price">
+                    Total Price: <strong>$0.00</strong>
+                </div>
+                <div class="input-container">
+                    <label>
+                        <input type="checkbox" name="terms" required id="check"/>
+                        I agree to the <a href="#">terms and conditions</a>
+                    </label>
+                </div>
+                <div class="btn-container">
+                  <button type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
+        </div>
+    </div>
         <div class="lower-btns">
-            <div class="registration-button btn">
+            <div class="registration-button btn" role="button" tabindex="0" onclick="handleClick(event)">
                 <img src="./images/Group 37.png" alt="register" class="reg-img">
                 <p>Book</p>
             </div>
-            <div class="scroll-btn btn">
+            <div class="scroll-btn btn" id="book" role="button" tabindex="0" onclick="handleClick(event)">
                 <img src="./images/Subtraction 2.png" alt="scroll">
-            </div>
-            <div class="book-form">
-                <form>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" >
-                    <label for="email">email</label>
-                    <input type="email" name="email">
-                    <label for="mobile"></label>
-                    <input type="tel">
-                    <label for="room">Select Room</label>
-                    <input type="radio">
-                </form>
             </div>
         </div>
     </section>
