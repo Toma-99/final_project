@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 .hero {
   height: 100vh;
@@ -100,160 +101,225 @@
 }
 
 .pop-up-wrapper {
-  position: absolute;
-  top: calc(50% + 25px);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  width: 100%;
-  max-width: 100vw;
-  padding: 20px;
-  display: none;
+    position: absolute;
+    top: calc(50% + 25px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 100%;
+    max-width: 100vw;
+    padding: 20px;
+    display: none;
 }
 .pop-up {
-  position: relative;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-  padding: 24px 32px;
-  max-width: 800px;
-  margin: 0 auto;
+    position: relative;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    padding: 24px 32px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: transparent;
-  border: none;
-  font-size: 28px;
-  cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 .suggest {
-  text-align: center;
-  margin-bottom: 24px;
+    text-align: center;
+    margin-bottom: 24px;
 }
 
 .suggest h3 {
-  font-size: 20px;
-  margin-bottom: 6px;
-  color: #000;
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: #000;
 }
 
 .suggest p {
-  font-size: 14px;
-  color: black;
+    font-size: 14px;
+    color: black;
 }
 
 .book-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /* Align rows of inputs */
 .outer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* Label + input container */
 .input-container {
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
 }
 
 .input-container label {
-  display: block;
-  font-size: 14px;
-  font-weight: 500;
-  color: black;
-  margin-bottom: 4px;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 4px;
 }
 
+/* Updated Input and Select Styling for consistency and validation colors */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="number"],
 input[type="date"],
 select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: border 0.2s;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.2s; /* Smooth border color transition */
+    height: 40px; /* Explicit height for better consistency */
+    line-height: 1.5; /* Helps align text and icons */
 }
 
 input:focus,
 select:focus {
-  border-color: #007bff;
-  outline: none;
+    border-color: #007bff;
+    outline: none;
 }
 
 select {
-  background-color: #fff;
+    background-color: #fff;
 }
+
+/* Validation success/error border colors */
+.input-container.success input,
+.input-container.success select {
+    border-color: #2ecc71; /* Green for success */
+}
+
+.input-container.error input,
+.input-container.error select {
+    border-color: #e74c3c; /* Red for error */
+}
+
 
 /* Price & Terms */
 .price {
-  flex: 1 1 45%;
-  font-weight: bold;
-  font-size: 16px;
-  align-self: center;
-  color: #000;
+    flex: 1 1 45%;
+    font-weight: bold;
+    font-size: 16px;
+    align-self: center;
+    color: #000;
 }
 
 .input-container input[type="checkbox"] {
-  margin-right: 8px;
+    margin-right: 8px;
 }
 
 .input-container a {
-  color: #007bff;
-  text-decoration: underline;
-  font-size: 14px;
+    color: #007bff;
+    text-decoration: underline;
+    font-size: 14px;
 }
 
 /* Submit Button Centered */
 .btn-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 button[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.65rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  width: 200px;
-  transition: background-color 0.2s ease-in-out;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.65rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 200px;
+    transition: background-color 0.2s ease-in-out;
 }
 
 button[type="submit"]:hover {
-  background-color: #005fa3;
+    background-color: #005fa3;
 }
 
-/* Error Message Styling */
-.error-message {
-  background-color: #fcf4a3;
-  color: black;
-  padding: 0.4rem 0.8rem;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-  font-size: 14px;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+/* Error Message Styling (NOTE: This class is not applied by the fixed JS, but kept if you use it elsewhere) */
+.error-message { 
+    background-color: #fcf4a3;
+    color: black;
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* === Validation Icon Styling for Booking Form (.input-container) === */
+.input-container i.fas {
+    position: absolute;
+    top: 50%; /* Vertically centers the icon */
+    transform: translateY(-50%); /* Pulls the icon up by half its height for perfect center */
+    right: 12px; /* Default right position for icons */
+    font-size: 16px;
+    visibility: hidden; /* Default: hidden, JS/class will make it visible */
+    transition: 0.2s ease-in-out;
+    pointer-events: none; /* Allows clicks to pass through to the input */
+    z-index: 2;
+}
+
+/* Specific adjustment for icons in date input fields to avoid covering calendar icon */
+.input-container input[type="date"] + i.fas {
+    right: 35px; /* Adjust this value as needed to clear the native calendar icon */
+}
+
+/* Ensure default invisibility for both check and exclamation icons */
+.input-container i.fa-check-circle,
+.input-container i.fa-exclamation-circle {
+    visibility: hidden;
+}
+
+.input-container.error i.fa-exclamation-circle {
+    visibility: visible; /* Show exclamation on error */
+    color: #e74c3c; /* Error color */
+}
+
+.input-container.success i.fa-check-circle {
+    visibility: visible; /* Show checkmark on success */
+    color: #2ecc71; /* Success color */
+}
+
+/* --- Your existing .input-container.error i.fa-eye rule (leaving as is, likely for login form) --- */
+.input-container.error i.fa-eye {
+    right: 32px;
+}
+
+.input-container small {
+    font-size: 12px;
+    color: #e74c3c;
+    margin-top: 4px;
+    visibility: hidden; /* Hidden by default, JS/class will make it visible */
+}
+
+.input-container.error small {
+    visibility: visible; /* Show message on error */
+}
 .login-wrap {
   position: absolute; /* So it covers the whole viewport */
   top: 50%;
@@ -344,9 +410,7 @@ button[type="submit"]:hover {
   visibility: hidden;
   position: absolute;
   top: 50%; /* Changed: Center vertically */
-  transform: translateY(
-    -50%
-  ); /* Added: Pull icon up by half its height for perfect center */
+  transform: translateY(-50%); /* Added: Pull icon up by half its height for perfect center */
   right: 15px; /* Adjusted: More consistent spacing from right edge */
   transition: 0.3s;
 }
@@ -359,11 +423,11 @@ button[type="submit"]:hover {
 
 .form-control i.fa-eye.error {
   /* No longer need separate right value, let general rule apply or adjust if desired specific offset */
-  right: 20px;
+  right: 20px; 
 }
 
 .form-control.error i.fa-eye-slash {
-  right: 20px;
+  right: 20px; 
 }
 
 .form-control i.fa-eye-slash {
@@ -512,153 +576,4 @@ button[type="submit"]:hover {
 
 .text-side {
   justify-items: center;
-}
-
-.history-sec {
-  margin-top: 3em;
-}
-
-.history {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.history-txt {
-  width: 70%;
-  padding: 2.5em;
-}
-
-.history-imgs ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.staff {
-  margin-top: 3em;
-}
-
-.staff-inf {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-}
-
-.rooms-sec {
-  margin-top: 3em;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.room-content {
-  margin: 0 auto;
-  width: 80%;
-  display: flex;
-  padding: 20px;
-  border: 2px solid grey;
-}
-
-.line1 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.room-btns {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5em;
-}
-
-.room-desc {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.hero-last {
-  height: auto;
-  background-color: cadetblue;
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding-bottom: 100px;
-  position: relative;
-}
-
-.contact-welcome {
-  width: 40%;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 5em;
-}
-
-.support-wrap {
-  margin-top: 3em;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 3em;
-}
-
-.welcome-support-txt {
-  width: 80%;
-  margin: 0 auto;
-  align-items: stretch;
-  gap: 20px;
-}
-
-.main-support {
-  width: 80%;
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-around;
-}
-
-.icon {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-}
-
-.footer-submit {
-  background-color: aqua;
-}
-
-.main-addresses ul {
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.help-options {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.help-inp {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.txtarea {
-  resize: none;
-  height: 80px;
 }

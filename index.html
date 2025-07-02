@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/index_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="scripts/booking.js" defer></script>
+    <script src="./scripts/login.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -22,8 +23,8 @@
                         <li><a href="./contact_us.html">Contact Us</a></li>
                     </ul>
                 </nav>
-                <div class="login-btn btn" role="button" tabindex="0" onclick="handleClick(event)">Log In</div>
-                <div class="burger-bar" role="button" tabindex="0" onclick="handleClick(event)">
+                <div class="login-btn btn" id="login-btn" role="button" tabindex="0" onclick="handleClick(event)">Log In</div>
+                <div class="burger-bar" role="button" tabindex="0">
                     <div class="upper"></div>
                     <div class="mid"></div>
                     <div class="lower"></div>
@@ -35,9 +36,10 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
              Omnis laboriosam earum non suscipit sint obcaecati modi! 
              Officiis corrupti beatae vero tempore doloremque ipsam. 
-            Et sapiente voluptate quibusdam sunt, voluptas laborum.
+             Et sapiente voluptate quibusdam sunt, voluptas laborum.
             </p>
         </div>
+        <div class="login-wrap" id="login"></div>
         <div class="pop-up-wrapper">
             <div class="pop-up">
               <button class="close-btn" aria-label="Close Booking Form">
@@ -48,99 +50,112 @@
                 <p>or login</p>
               </div>
               <form class="book-form">
-                <div class="errors-container"></div>
                 <div class="outer">
-                <div class="input-container">
-                  <label for="name">Name</label>
-                  <input
-                    type="text"
-                    id="usernamefield"
-                    name="name"
-                    maxlength="25"
-                    required
-                  />
-                  <p class="error-text" id="error-username"></p>
-                </div>
-                <div class="input-container">
-                  <label for="surname">Surname</label>
-                  <input
-                    type="text"
-                    id="surnamefield"
-                    name="surname"
-                    maxlength="25"
-                    required
-                  />
-                  <p class="error-text" id="error-surname"></p>
-                </div>
-            </div>
-            <div class="outer">
-                <div class="input-container">
-                    <label for="tel"> Phone number</label>
-                    <input type="tel" id="telfield" name="tel" maxlength="15" required />
-                    <p class="error-text" id="error-tel"></p>
-                  </div>
-                <div class="input-container">
-                  <label for="email"> Email:</label>
-                  <input type="email" id="emailfield" name="email" required />
-                  <p class="error-text" id="error-email"></p>
-                </div>
-            </div>
-            <div class="outer">
-    
-                <div class="input-container">
-                    <label for="persons"> Pesrsons (3 max) </label>
+                  <div class="input-container">
+                    <label for="name">Name</label>
                     <input
-                      type="number"
-                      id="personsfield"
-                      name="persons"
-                      min="0"
-                      max="3"
+                      type="text"
+                      id="usernamefield"
+                      name="name"
+                      maxlength="25"
                       required
                     />
-                    <pclass="error-text" id="error-persons"></p>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
                   </div>
-                <div class="input-container">
-                  <label for="Room">Room</label>
-                  <select id="roomfield" name="room" required>
-                    <option value="">Select Room</option>
-                    <option value="room1">Room 1</option>
-                    <option value="room2">Room 2</option>
-                    <option value="room3">Room 3</option>
-                    <option value="room4">Room 4</option>
-                  </select>
-                  <p class="error-text" id="error-room"></p>
+                  <div class="input-container">
+                    <label for="surname">Surname</label> <input
+                      type="text"
+                      id="surnamefield"
+                      name="surname"
+                      maxlength="25"
+                      required
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
+                  </div>
                 </div>
-
-            </div>
-            <div class="outer">
-                <div class="input-container">
-                  <label for="checkin">Check in</label>
-                  <input type="date" id="checkinfield" name="checkin" required />
-                  <p class="error-text" id="error-checkin"></p>
+                <div class="outer">
+                  <div class="input-container">
+                    <label for="tel">Phone number</label> <input
+                      type="tel"
+                      id="telfield"
+                      name="tel"
+                      maxlength="15" 
+                      required
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
+                  </div>
+                  <div class="input-container">
+                    <label for="email">Email</label> <input
+                      type="email"
+                      id="emailfield"
+                      name="email"
+                      maxlength="25" 
+                      required
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
+                  </div>
                 </div>
-                <div class="input-container">
-                  <label for="checkout">Check Out</label>
-                  <input type="date" id="checkoutfield" name="checkout" required />
-                  <p class="error-text" id="checkout"></p>
+                <div class="outer">
+                    <div class="input-container">
+                        <label for="persons">Persons (3 max)</label> <input
+                          type="number"
+                          id="personsfield"
+                          name="persons"
+                          min="0"
+                          max="3"
+                          required
+                        />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
+                    </div>
+                    <div class="input-container">
+                        <label for="Room">Room</label>
+                        <select id="roomfield" name="room" required>
+                            <option value="">Select Room</option>
+                            <option value="room1">Room 1</option>
+                            <option value="room2">Room 2</option>
+                            <option value="room3">Room 3</option>
+                            <option value="room4">Room 4</option>
+                        </select>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
+                    </div>
                 </div>
-            </div>
-            <div class="outer">
-                <div class="price">
-                    Total Price: <strong>$0.00</strong>
+                <div class="outer">
+                    <div class="input-container">
+                        <label for="checkin">Check in</label>
+                        <input type="date" id="checkinfield" name="checkin" required />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
+                    </div>
+                    <div class="input-container">
+                        <label for="checkout">Check Out</label>
+                        <input type="date" id="checkoutfield" name="checkout" required />
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
+                    </div>
                 </div>
-                <div class="input-container">
-                    <label>
-                        <input type="checkbox" name="terms" required id="check"/>
-                        I agree to the <a href="#">terms and conditions</a>
-                    </label>
-                </div>
-                <div class="btn-container">
-                  <button type="submit">Submit</button>
+                <div class="outer">
+                    <div class="price">
+                        Total Price: <strong>$0.00</strong>
+                    </div>
+                    <div class="input-container">
+                        <label>
+                            <input type="checkbox" name="terms" required id="check"/>
+                            I agree to the <a href="#">terms and conditions</a>
+                        </label>
+                    </div>
+                    <div class="btn-container">
+                        <button type="submit">Submit</button>
+                    </div>
                 </div>
               </form>
             </div>
         </div>
-    </div>
         <div class="lower-btns">
             <div class="registration-button btn" role="button" tabindex="0" onclick="handleClick(event)">
                 <img src="./images/Group 37.png" alt="register" class="reg-img">
@@ -169,7 +184,7 @@
             <div class="extend"></div>
         </div>
         <div class="usr-story">
-                        <div class="usr-story-imgs">
+            <div class="usr-story-imgs">
                 <img src="./images/7182fe6792fc1f646d8244ae03a80506.jpg" alt="someimage">
             </div>
             <div class="text-side">

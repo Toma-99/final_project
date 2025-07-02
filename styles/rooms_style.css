@@ -167,6 +167,7 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  position: relative;
 }
 
 .input-container label {
@@ -177,6 +178,7 @@
   margin-bottom: 4px;
 }
 
+/* Updated Input and Select Styling for consistency and validation colors */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -187,7 +189,9 @@ select {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 14px;
-  transition: border 0.2s;
+  transition: border 0.2s; /* Smooth border color transition */
+  height: 40px; /* Explicit height for better consistency */
+  line-height: 1.5; /* Helps align text and icons */
 }
 
 input:focus,
@@ -198,6 +202,17 @@ select:focus {
 
 select {
   background-color: #fff;
+}
+
+/* Validation success/error border colors */
+.input-container.success input,
+.input-container.success select {
+  border-color: #2ecc71; /* Green for success */
+}
+
+.input-container.error input,
+.input-container.error select {
+  border-color: #e74c3c; /* Red for error */
 }
 
 /* Price & Terms */
@@ -243,7 +258,7 @@ button[type="submit"]:hover {
   background-color: #005fa3;
 }
 
-/* Error Message Styling */
+/* Error Message Styling (NOTE: This class is not applied by the fixed JS, but kept if you use it elsewhere) */
 .error-message {
   background-color: #fcf4a3;
   color: black;
@@ -254,6 +269,57 @@ button[type="submit"]:hover {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* === Validation Icon Styling for Booking Form (.input-container) === */
+.input-container i.fas {
+  position: absolute;
+  top: 50%; /* Vertically centers the icon */
+  transform: translateY(
+    -50%
+  ); /* Pulls the icon up by half its height for perfect center */
+  right: 12px; /* Default right position for icons */
+  font-size: 16px;
+  visibility: hidden; /* Default: hidden, JS/class will make it visible */
+  transition: 0.2s ease-in-out;
+  pointer-events: none; /* Allows clicks to pass through to the input */
+  z-index: 2;
+}
+
+/* Specific adjustment for icons in date input fields to avoid covering calendar icon */
+.input-container input[type="date"] + i.fas {
+  right: 35px; /* Adjust this value as needed to clear the native calendar icon */
+}
+
+/* Ensure default invisibility for both check and exclamation icons */
+.input-container i.fa-check-circle,
+.input-container i.fa-exclamation-circle {
+  visibility: hidden;
+}
+
+.input-container.error i.fa-exclamation-circle {
+  visibility: visible; /* Show exclamation on error */
+  color: #e74c3c; /* Error color */
+}
+
+.input-container.success i.fa-check-circle {
+  visibility: visible; /* Show checkmark on success */
+  color: #2ecc71; /* Success color */
+}
+
+/* --- Your existing .input-container.error i.fa-eye rule (leaving as is, likely for login form) --- */
+.input-container.error i.fa-eye {
+  right: 32px;
+}
+
+.input-container small {
+  font-size: 12px;
+  color: #e74c3c;
+  margin-top: 4px;
+  visibility: hidden; /* Hidden by default, JS/class will make it visible */
+}
+
+.input-container.error small {
+  visibility: visible; /* Show message on error */
+}
 .login-wrap {
   position: absolute; /* So it covers the whole viewport */
   top: 50%;
@@ -435,119 +501,6 @@ button[type="submit"]:hover {
   cursor: pointer;
 }
 
-.info {
-  padding-top: 3em;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.description {
-  max-width: 1980px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 1.3em;
-}
-
-.description-txt {
-  width: 50%;
-  text-align: center;
-  margin: 20px;
-}
-
-.usr-story {
-  max-width: 1980px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.usr-story-txt {
-  text-align: center;
-  margin: 20px;
-}
-
-.endnote {
-  padding-top: 2.5em;
-  width: 100%;
-  text-align: center;
-}
-
-.footer-wrap {
-  width: 100%;
-  background-color: gainsboro;
-  margin-top: 3em;
-}
-
-.footer-out {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-sec {
-  margin: 3em 0;
-  padding: 0 2em;
-}
-
-.footer-sec li {
-  padding-top: 1em;
-}
-
-.load-btn {
-  width: 135px;
-  height: 40px;
-  background: darkgoldenrod;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 15px;
-}
-
-.text-side {
-  justify-items: center;
-}
-
-.history-sec {
-  margin-top: 3em;
-}
-
-.history {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.history-txt {
-  width: 70%;
-  padding: 2.5em;
-}
-
-.history-imgs ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.staff {
-  margin-top: 3em;
-}
-
-.staff-inf {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-}
-
 .rooms-sec {
   margin-top: 3em;
   width: 100%;
@@ -581,84 +534,56 @@ button[type="submit"]:hover {
   gap: 20px;
 }
 
-.hero-last {
-  height: auto;
-  background-color: cadetblue;
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding-bottom: 100px;
-  position: relative;
+.first-btn {
+  width: 135px;
+  height: 40px;
+  background: darkgoldenrod;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+  cursor: pointer;
 }
 
-.contact-welcome {
+.endnote {
+  padding-top: 2.5em;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-wrap {
+  width: 100%;
+  background-color: gainsboro;
+  margin-top: 3em;
+}
+
+.footer-out {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-sec {
+  margin: 3em 0;
+  padding: 0 2em;
+}
+
+.footer-sec li {
+  padding-top: 1em;
+}
+
+.room-facilities {
   width: 40%;
   margin: 0 auto;
-  text-align: center;
-  padding-top: 5em;
+  height: auto;
+  padding: 20px;
 }
 
-.support-wrap {
-  margin-top: 3em;
-  width: 100%;
+.room-facilities ul {
   display: flex;
-  flex-direction: column;
-  gap: 3em;
-}
-
-.welcome-support-txt {
-  width: 80%;
-  margin: 0 auto;
-  align-items: stretch;
+  flex-wrap: wrap;
   gap: 20px;
-}
-
-.main-support {
-  width: 80%;
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-around;
-}
-
-.icon {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-}
-
-.footer-submit {
-  background-color: aqua;
-}
-
-.main-addresses ul {
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.help-options {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.help-inp {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.txtarea {
-  resize: none;
-  height: 80px;
 }

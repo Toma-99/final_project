@@ -1,257 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="scripts/script.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/rooms_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="scripts/booking.js" defer></script>
+    <script src="./scripts/login.js" defer></script>
+    <script src="./scripts/facilities.js" defer></script>
     <title>Document</title>
-</head>
-<body>
-        <section class="hero">
-            <header class="header-wrapper">
-                <div class="header-elements">
-                    <a href="./index.html"><img src="" alt="logo"></a>
-                    <nav class="navigation">
-                        <ul class="ul-elements">
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./about_us.html">About Us</a></li>
-                            <li><a href="./rooms.html">Rooms</a></li>
-                            <li><a href="./contact_us.html">Contact Us</a></li>
-                        </ul>
-                    </nav>
-                    <div class="login-btn">Log In</div>
-                    <div class="burger-bar">
-                        <div class="upper"></div>
-                        <div class="mid"></div>
-                        <div class="lower"></div>
-                    </div>
-                </div>
-            </header>
-            <div class="welcome-txt">
-                <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Omnis laboriosam earum non suscipit sint obcaecati modi! 
-                Officiis corrupti beatae vero tempore doloremque ipsam. 
-                Et sapiente voluptate quibusdam sunt, voluptas laborum.
-                </p>
-            </div>
-            <div class="pop-up-wrapper">
-                <div class="pop-up">
-                  <button class="close-btn" aria-label="Close Booking Form">
-                    &times;
-                  </button>
-                  <div class="suggest">
-                    <h3>please fill the form</h3>
-                    <p>or login</p>
-                  </div>
-                  <form class="book-form">
-                    <div class="errors-container"></div>
-                    <div class="outer">
-                    <div class="input-container">
-                      <label for="name">Name</label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        maxlength="25"
-                        required
-                      />
-                    </div>
-                    <div class="input-container">
-                      <label for="surname">Surname</label>
-                      <input
-                        type="text"
-                        id="surname"
-                        name="surname"
-                        maxlength="25"
-                        required
-                      />
-                    </div>
-                </div>
-                <div class="outer">
-                    <div class="input-container">
-                        <label for="tel"> Phone number</label>
-                        <input type="tel" id="tel" name="tel" maxlength="15" required />
-                      </div>
-                    <div class="input-container">
-                      <label for="email"> Email:</label>
-                      <input type="email" id="email" name="email" required />
-                    </div>
-                </div>
-                <div class="outer">
-        
-                    <div class="input-container">
-                        <label for="persons"> Pesrsons (3 max) </label>
-                        <input
-                          type="number"
-                          id="persons"
-                          name="persons"
-                          min="0"
-                          max="3"
-                          required
-                        />
-                      </div>
-                    <div class="input-container">
-                      <label for="Room">Room</label>
-                      <select id="room" name="room" required>
-                        <option value="">Select Room</option>
-                        <option value="room1">Room 1</option>
-                        <option value="room2">Room 2</option>
-                        <option value="room3">Room 3</option>
-                        <option value="room4">Room 4</option>
-                      </select>
-                    </div>
-                </div>
-                <div class="outer">
-                    <div class="input-container">
-                      <label for="checkin">Check in</label>
-                      <input type="date" id="checkin" name="checkin" required />
-                    </div>
-                    <div class="input-container">
-                      <label for="checkout">Check Out</label>
-                      <input type="date" id="checkout" name="checkout" required />
-                    </div>
-                </div>
-                <div class="outer">
-                    <div class="price">
-                        Total Price: <strong>$0.00</strong>
-                    </div>
-                    <div class="input-container">
-                        <label>
-                            <input type="checkbox" name="terms" required />
-                            I agree to the <a href="#">terms and conditions</a>
-                        </label>
-                    </div>
-                    <div class="btn-container">
-                      <button type="submit">Submit</button>
-                    </div>
-                  </form>
-                </div>
-            </div>
+  </head>
+  <body>
+    <section class="hero">
+      <header class="header-wrapper">
+        <div class="header-elements">
+          <a href="./index.html"><img src="" alt="logo" /></a>
+          <nav class="navigation">
+            <ul class="ul-elements">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about_us.html">About Us</a></li>
+              <li><a href="./rooms.html">Rooms</a></li>
+              <li><a href="./contact_us.html">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div
+            class="login-btn btn"
+            id="login-btn"
+            role="button"
+            tabindex="0"
+            onclick="handleClick(event)"
+          >
+            Log In
+          </div>
+          <div class="burger-bar" role="button" tabindex="0">
+            <div class="upper"></div>
+            <div class="mid"></div>
+            <div class="lower"></div>
+          </div>
         </div>
+      </header>
+      <div class="welcome-txt">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+          laboriosam earum non suscipit sint obcaecati modi! Officiis corrupti
+          beatae vero tempore doloremque ipsam. Et sapiente voluptate quibusdam
+          sunt, voluptas laborum.
+        </p>
+      </div>
+      <div class="login-wrap" id="login"></div>
+      <div class="pop-up-wrapper">
+        <div class="pop-up">
+          <button class="close-btn" aria-label="Close Booking Form">
+            &times;
+          </button>
+          <div class="suggest">
+            <h3>please fill the form</h3>
+            <p>or login</p>
+          </div>
+          <form class="book-form">
+            <div class="outer">
+              <div class="input-container">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="usernamefield"
+                  name="name"
+                  maxlength="25"
+                  required
+                />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+              <div class="input-container">
+                <label for="surname">Surname</label>
+                <input
+                  type="text"
+                  id="surnamefield"
+                  name="surname"
+                  maxlength="25"
+                  required
+                />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+            </div>
+            <div class="outer">
+              <div class="input-container">
+                <label for="tel">Phone number</label>
+                <input
+                  type="tel"
+                  id="telfield"
+                  name="tel"
+                  maxlength="15"
+                  required
+                />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+              <div class="input-container">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="emailfield"
+                  name="email"
+                  maxlength="25"
+                  required
+                />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+            </div>
+            <div class="outer">
+              <div class="input-container">
+                <label for="persons">Persons (3 max)</label>
+                <input
+                  type="number"
+                  id="personsfield"
+                  name="persons"
+                  min="0"
+                  max="3"
+                  required
+                />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+              <div class="input-container">
+                <label for="Room">Room</label>
+                <select id="roomfield" name="room" required>
+                  <option value="">Select Room</option>
+                  <option value="room1">Room 1</option>
+                  <option value="room2">Room 2</option>
+                  <option value="room3">Room 3</option>
+                  <option value="room4">Room 4</option>
+                </select>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+            </div>
+            <div class="outer">
+              <div class="input-container">
+                <label for="checkin">Check in</label>
+                <input type="date" id="checkinfield" name="checkin" required />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+              <div class="input-container">
+                <label for="checkout">Check Out</label>
+                <input
+                  type="date"
+                  id="checkoutfield"
+                  name="checkout"
+                  required
+                />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+            </div>
+            <div class="outer">
+              <div class="price">Total Price: <strong>$0.00</strong></div>
+              <div class="input-container">
+                <label>
+                  <input type="checkbox" name="terms" required id="check" />
+                  I agree to the <a href="#">terms and conditions</a>
+                </label>
+              </div>
+              <div class="btn-container">
+                <button type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
         </div>
-            <div class="lower-btns">
-                <div class="registration-button">
-                    <img src="./images/Group 37.png" alt="register" class="reg-img">
-                    <p>Book</p>
-                </div>
-                <div class="scroll-btn">
-                    <img src="./images/Subtraction 2.png" alt="scroll">
-                </div>
+      </div>
+      <div class="lower-btns">
+        <div class="registration-button">
+          <img src="./images/Group 37.png" alt="register" class="reg-img" />
+          <p>Book</p>
+        </div>
+        <div class="scroll-btn">
+          <img src="./images/Subtraction 2.png" alt="scroll" />
+        </div>
+      </div>
+    </section>
+    <section class="rooms-sec">
+      <div class="rooms-info">
+        <div class="room-content" id="rooms1">
+          <div class="room-img"><img src="" alt="img1" /></div>
+          <div class="room-desc">
+            <div class="line1">
+              <h3>room name</h3>
+              <p class="rprice">Euro</p>
             </div>
-        </section>
-        <section class="rooms-sec">
-            <div class="rooms-info">
-                <div class="room-content">
-                    <div class="room-img"><img src="" alt="img1"></div>
-                    <div class="room-desc">
-                        <div class="line1">
-                            <h3>room name</h3>
-                            <p class="price">Euro</p>
-                        </div>
-                        <div class="desc-txt">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Eum sit minus harum? Tempora culpa, ea architecto vitae molestias 
-                                rem modi esse voluptas ut, incidunt mollitia inventore illum 
-                                optio ipsa ipsum?
-                            </p>
-                        </div>
-                        <div class="room-btns">
-                            <div class="load-btn first-btn">Facilities</div>
-                            <div class="registration-button">
-                                <img src="./images/Group 37.png" alt="register" class="reg-img">
-                                <p>Book</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="desc-txt">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sit
+                minus harum? Tempora culpa, ea architecto vitae molestias rem
+                modi esse voluptas ut, incidunt mollitia inventore illum optio
+                ipsa ipsum?
+              </p>
+              <div class="room-facilities"></div>
             </div>
-            <div class="rooms-info">
-                <div class="room-content">
-                    <div class="room-img"><img src="" alt="img1"></div>
-                    <div class="room-desc">
-                        <div class="line1">
-                            <h3>room name</h3>
-                            <p class="price">Euro</p>
-                        </div>
-                        <div class="desc-txt">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Eum sit minus harum? Tempora culpa, ea architecto vitae molestias 
-                                rem modi esse voluptas ut, incidunt mollitia inventore illum 
-                                optio ipsa ipsum?
-                            </p>
-                        </div>
-                        <div class="room-btns">
-                            <div class="load-btn first-btn">Facilities</div>
-                            <div class="registration-button">
-                                <img src="./images/Group 37.png" alt="register" class="reg-img">
-                                <p>Book</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="room-btns">
+              <div class="first-btn" role="button" tabindex="0">Facilities</div>
+              <div class="registration-button">
+                <img
+                  src="./images/Group 37.png"
+                  alt="register"
+                  class="reg-img"
+                />
+                <p>Book</p>
+              </div>
             </div>
-            <div class="rooms-info">
-                <div class="room-content">
-                    <div class="room-img"><img src="" alt="img1"></div>
-                    <div class="room-desc">
-                        <div class="line1">
-                            <h3>room name</h3>
-                            <p class="price">Euro</p>
-                        </div>
-                        <div class="desc-txt">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Eum sit minus harum? Tempora culpa, ea architecto vitae molestias 
-                                rem modi esse voluptas ut, incidunt mollitia inventore illum 
-                                optio ipsa ipsum?
-                            </p>
-                        </div>
-                        <div class="room-btns">
-                            <div class="load-btn first-btn">Facilities</div>
-                            <div class="registration-button">
-                                <img src="./images/Group 37.png" alt="register" class="reg-img">
-                                <p>Book</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </div>
+      <div class="rooms-info">
+        <div class="room-content" id="rooms2">
+          <div class="room-img"><img src="" alt="img1" /></div>
+          <div class="room-desc">
+            <div class="line1">
+              <h3>room name</h3>
+              <p class="rprice">Euro</p>
             </div>
-                    <div class="rooms-info">
-                <div class="room-content">
-                    <div class="room-img"><img src="" alt="img1"></div>
-                    <div class="room-desc">
-                        <div class="line1">
-                            <h3>room name</h3>
-                            <p class="price">Euro</p>
-                        </div>
-                        <div class="desc-txt">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Eum sit minus harum? Tempora culpa, ea architecto vitae molestias 
-                                rem modi esse voluptas ut, incidunt mollitia inventore illum 
-                                optio ipsa ipsum?
-                            </p>
-                        </div>
-                        <div class="room-btns">
-                            <div class="load-btn first-btn">Facilities</div>
-                            <div class="registration-button">
-                                <img src="./images/Group 37.png" alt="register" class="reg-img">
-                                <p>Book</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="desc-txt">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sit
+                minus harum? Tempora culpa, ea architecto vitae molestias rem
+                modi esse voluptas ut, incidunt mollitia inventore illum optio
+                ipsa ipsum?
+              </p>
+              <div class="room-facilities"></div>
             </div>
-        </section>
+            <div class="room-btns">
+              <div class="first-btn" role="button" tabindex="0">Facilities</div>
+              <div class="registration-button">
+                <img
+                  src="./images/Group 37.png"
+                  alt="register"
+                  class="reg-img"
+                />
+                <p>Book</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rooms-info">
+        <div class="room-content" id="rooms3">
+          <div class="room-img"><img src="" alt="img1" /></div>
+          <div class="room-desc">
+            <div class="line1">
+              <h3>room name</h3>
+              <p class="rprice">Euro</p>
+            </div>
+            <div class="desc-txt">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sit
+                minus harum? Tempora culpa, ea architecto vitae molestias rem
+                modi esse voluptas ut, incidunt mollitia inventore illum optio
+                ipsa ipsum?
+              </p>
+              <div class="room-facilities"></div>
+            </div>
+            <div class="room-btns">
+              <div class="first-btn" role="button" tabindex="0">Facilities</div>
+              <div class="registration-button">
+                <img
+                  src="./images/Group 37.png"
+                  alt="register"
+                  class="reg-img"
+                />
+                <p>Book</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rooms-info">
+        <div class="room-content" id="rooms4">
+          <div class="room-img"><img src="" alt="img1" /></div>
+          <div class="room-desc">
+            <div class="line1">
+              <h3>room name</h3>
+              <p class="rprice">Euro</p>
+            </div>
+            <div class="desc-txt">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sit
+                minus harum? Tempora culpa, ea architecto vitae molestias rem
+                modi esse voluptas ut, incidunt mollitia inventore illum optio
+                ipsa ipsum?
+              </p>
+              <div class="room-facilities"></div>
+            </div>
+            <div class="room-btns">
+              <div class="first-btn" role="button" tabindex="0">Facilities</div>
+              <div class="registration-button">
+                <img
+                  src="./images/Group 37.png"
+                  alt="register"
+                  class="reg-img"
+                />
+                <p>Book</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer-wrap">
       <div class="footer-out">
         <div class="footer-sec first">
           <ul>
-            <li><p>email:<a href="mailto: example99@gmail.com">example99</a></p></li>
-            <li><p>Address:<a href="#">chavchavadze83, tbilisi, georgia</a></p></li>
-            <li style="display: flex; flex-wrap: wrap;"><p>Phone:<a href="tell:123-456-789">123-456-789</a></p></li>
+            <li>
+              <p>email:<a href="mailto: example99@gmail.com">example99</a></p>
+            </li>
+            <li>
+              <p>Address:<a href="#">chavchavadze83, tbilisi, georgia</a></p>
+            </li>
+            <li style="display: flex; flex-wrap: wrap">
+              <p>Phone:<a href="tell:123-456-789">123-456-789</a></p>
+            </li>
           </ul>
         </div>
         <div class="footer-sec second">
@@ -262,22 +342,29 @@
           </ul>
         </div>
         <div class="footer-sec third">
-            <ul>
-                <li><a href=""><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                <li><a href=""><i class="fa-brands fa-x-twitter"> twitter</i></a></li>
-            </ul>
+          <ul>
+            <li>
+              <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-x-twitter"> twitter</i></a>
+            </li>
+          </ul>
         </div>
         <div class="footer-sec fourth">
           <ul>
             <li><a href="">Provacy and policy</a></li>
             <li><a href="">Subscribe to our new sellers</a></li>
-            <li><input type="email" name="emali">
-                <button type="submit" class="footer-submit">OK</button>
+            <li>
+              <input type="email" name="emali" />
+              <button type="submit" class="footer-submit">OK</button>
             </li>
           </ul>
         </div>
       </div>
     </footer>
-</body>
+  </body>
 </html>
