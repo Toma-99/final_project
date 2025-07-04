@@ -11,7 +11,7 @@ forms.addEventListener("submit", (e) => {
 });
 
 function checkInputs() {
-  const nameValue = fname.value.trim();
+  const nameValue = username.value.trim();
   const emailValue = email.value.trim();
   const messageValue = message.value.trim();
 
@@ -34,31 +34,41 @@ function checkInputs() {
   } else {
     setSuccessFor(message);
   }
-
-  const setErrorFor = (input, message) => {
-    const inputContainer = input.parentElement;
-    const small = inputContainer.querySelector("small");
-    const successIcon = inputContainer.querySelector(".fa-check-circle");
-    const errorIcon = inputContainer.querySelector(".fa-exclamation-circle");
-
-    small.innerText = message;
-    inputContainer.className = "input-container error";
-
-    if (successIcon) successIcon.style.visibility = "hidden";
-    if (errorIcon) errorIcon.style.visibility = "visible";
-  };
-
-  const setSuccessFor = (input) => {
-    const inputContainer = input.parentElement;
-    const small = inputContainer.querySelector("small");
-    const successIcon = inputContainer.querySelector(".fa-check-circle");
-    const errorIcon = inputContainer.querySelector(".fa-exclamation-circle");
-
-    small.innerText = "";
-    inputContainer.className = "input-container success";
-
-    // Explicitly manage icon visibility
-    if (successIcon) successIcon.style.visibility = "visible";
-    if (errorIcon) errorIcon.style.visibility = "hidden";
-  };
 }
+function setErrorFor(input, message) {
+  const inputContainer = input.parentElement;
+  const small = inputContainer.querySelector("small");
+  const successIcon = inputContainer.querySelector(".fa-check-circle");
+  const errorIcon = inputContainer.querySelector(".fa-exclamation-circle");
+
+  inputContainer.classList.remove("success");
+  inputContainer.classList.add("error");
+
+  small.innerText = message;
+
+  if (successIcon) successIcon.style.visibility = "hidden";
+  if (errorIcon) {
+    errorIcon.style.visibility = "visible";
+    small.style.visibility = "visible";
+  }
+}
+
+function setSuccessFor(input) {
+  const inputContainer = input.parentElement;
+  const small = inputContainer.querySelector("small");
+  const successIcon = inputContainer.querySelector(".fa-check-circle");
+  const errorIcon = inputContainer.querySelector(".fa-exclamation-circle");
+
+  inputContainer.classList.remove("error");
+  inputContainer.classList.add("success");
+
+  small.innerText = "";
+
+  if (successIcon) successIcon.style.visibility = "visible";
+  if (errorIcon) errorIcon.style.visibility = "hidden";
+}
+
+const isValidEmail = (email) => {
+  const emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return emailReg.test(email);
+};

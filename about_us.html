@@ -4,134 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/about_us.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/booking.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-        <section class="hero">
-        <header class="header-wrapper">
-            <div class="header-elements">
-                <a href="./index.html"><img src="" alt="logo"></a>
-                <nav class="navigation">
-                    <ul class="ul-elements">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./about_us.html">About Us</a></li>
-                        <li><a href="./rooms.html">Rooms</a></li>
-                        <li><a href="./contact_us.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-                <div class="login-btn">Log In</div>
-                <div class="burger-bar">
-                    <div class="upper"></div>
-                    <div class="mid"></div>
-                    <div class="lower"></div>
-                </div>
+      <header class="header-wrapper">
+        <div class="header-elements">
+            <a href="./index.html"><img src="/images/logo.png" alt="logo" class="logo-wrap"></a>
+            <nav class="navigation">
+                <ul class="ul-elements">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about_us.html">About Us</a></li>
+                    <li><a href="./rooms.html">Rooms</a></li>
+                    <li><a href="./contact_us.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="login-btn">Log In</div>
+            <div class="burger-bar">
+                <div class="upper"></div>
+                <div class="mid"></div>
+                <div class="lower"></div>
             </div>
-        </header>
+        </div>
+    </header>
+        <section class="hero">
         <div class="welcome-txt">
+            <h1>More Than a Hotel - It's a Feeling</h1>
             <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Omnis laboriosam earum non suscipit sint obcaecati modi! 
-             Officiis corrupti beatae vero tempore doloremque ipsam. 
-            Et sapiente voluptate quibusdam sunt, voluptas laborum.
+              Seaside Haven was born from a love of the coast and a belief in slow living. We set out to create a space where guests could feel at home by the sea — cared for, calm, and completely at ease. Every detail here reflects that purpose.
+
+
             </p>
         </div>
         <div class="pop-up-wrapper">
-            <div class="pop-up">
-              <button class="close-btn" aria-label="Close Booking Form">
-                &times;
-              </button>
-              <div class="suggest">
-                <h3>please fill the form</h3>
-                <p>or login</p>
-              </div>
-              <form class="book-form">
-                <div class="errors-container"></div>
+          <div class="pop-up">
+            <button class="close-btn" aria-label="Close Booking Form">
+              &times;
+            </button>
+            <div class="suggest">
+              <h3>please fill the form</h3>
+              <p>or login</p>
+            </div>
+            <form class="book-form">
+              <div class="scrollbar-container">
                 <div class="outer">
-                <div class="input-container">
-                  <label for="name">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    maxlength="25"
-                    required
-                  />
-                </div>
-                <div class="input-container">
-                  <label for="surname">Surname</label>
-                  <input
-                    type="text"
-                    id="surname"
-                    name="surname"
-                    maxlength="25"
-                    required
-                  />
-                </div>
-            </div>
-            <div class="outer">
-                <div class="input-container">
-                    <label for="tel"> Phone number</label>
-                    <input type="tel" id="tel" name="tel" maxlength="15" required />
+                  <div class="input-container">
+                    <label for="name">Name</label>
+                    <input
+                      type="text"
+                      id="usernamefield"
+                      name="name"
+                      maxlength="25"
+                      required
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                   </div>
-                <div class="input-container">
-                  <label for="email"> Email:</label>
-                  <input type="email" id="email" name="email" required />
+                  <div class="input-container">
+                    <label for="surname">Surname</label>
+                    <input
+                      type="text"
+                      id="surnamefield"
+                      name="surname"
+                      maxlength="25"
+                      required
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                  </div>
                 </div>
-            </div>
-            <div class="outer">
-    
-                <div class="input-container">
-                    <label for="persons"> Pesrsons (3 max) </label>
+                <div class="outer">
+                  <div class="input-container">
+                    <label for="tel">Phone number</label>
+                    <input
+                      type="tel"
+                      id="telfield"
+                      name="tel"
+                      maxlength="15"
+                      required
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                  </div>
+                  <div class="input-container">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      id="emailfield"
+                      name="email"
+                      maxlength="25"
+                      required
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                  </div>
+                </div>
+                <div class="outer">
+                  <div class="input-container">
+                    <label for="persons">Persons (3 max)</label>
                     <input
                       type="number"
-                      id="persons"
+                      id="personsfield"
                       name="persons"
                       min="0"
                       max="3"
                       required
                     />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                   </div>
-                <div class="input-container">
-                  <label for="Room">Room</label>
-                  <select id="room" name="room" required>
-                    <option value="">Select Room</option>
-                    <option value="room1">Room 1</option>
-                    <option value="room2">Room 2</option>
-                    <option value="room3">Room 3</option>
-                    <option value="room4">Room 4</option>
-                  </select>
+                  <div class="input-container">
+                    <label for="Room">Room</label>
+                    <select id="roomfield" name="room" required>
+                      <option value="">Select Room</option>
+                      <option value="room1">Room 1</option>
+                      <option value="room2">Room 2</option>
+                      <option value="room3">Room 3</option>
+                      <option value="room4">Room 4</option>
+                    </select>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                  </div>
                 </div>
-            </div>
-            <div class="outer">
-                <div class="input-container">
-                  <label for="checkin">Check in</label>
-                  <input type="date" id="checkin" name="checkin" required />
+                <div class="outer">
+                  <div class="input-container">
+                    <label for="checkin">Check in</label>
+                    <input
+                      type="date"
+                      id="checkinfield"
+                      name="checkin"
+                      required
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                  </div>
+                  <div class="input-container">
+                    <label for="checkout">Check Out</label>
+                    <input
+                      type="date"
+                      id="checkoutfield"
+                      name="checkout"
+                      required
+                    />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                  </div>
                 </div>
-                <div class="input-container">
-                  <label for="checkout">Check Out</label>
-                  <input type="date" id="checkout" name="checkout" required />
-                </div>
-            </div>
-            <div class="outer">
-                <div class="price">
-                    Total Price: <strong>$0.00</strong>
-                </div>
-                <div class="input-container">
+                <div class="outer">
+                  <div class="price">Total Price: <strong>$0.00</strong></div>
+                  <div class="input-container">
                     <label>
-                        <input type="checkbox" name="terms" required />
-                        I agree to the <a href="#">terms and conditions</a>
+                      <input type="checkbox" name="terms" required id="check" />
+                      I agree to the <a href="#">terms and conditions</a>
                     </label>
+                  </div>
+                  <div class="btn-container">
+                    <button type="submit">Submit</button>
+                  </div>
                 </div>
-                <div class="btn-container">
-                  <button type="submit">Submit</button>
-                </div>
-              </form>
-            </div>
+              </div>
+            </form>
+          </div>
         </div>
-    </div>
     </div>
         <div class="lower-btns">
             <div class="registration-button">
@@ -143,22 +187,17 @@
             </div>
         </div>
     </section>
-    <section class="history-sec">
-        <div class="history">
+
+    <main class="about-info">
+        <section class="history">
             <div class="history-txt">
-                <h3>Lorem ipsum is text generator</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Omnis laboriosam earum non suscipit sint obcaecati modi! 
-                Officiis corrupti beatae vero tempore doloremque ipsam. 
-                Et sapiente voluptate quibusdam sunt, voluptas laborum.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Omnis laboriosam earum non suscipit sint obcaecati modi! 
-                Officiis corrupti beatae vero tempore doloremque ipsam. 
-                Et sapiente voluptate quibusdam sunt, voluptas laborum.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Omnis laboriosam earum non suscipit sint obcaecati modi! 
-                Officiis corrupti beatae vero tempore doloremque ipsam. 
-                Et sapiente voluptate quibusdam sunt, voluptas laborum.</p>
+
+                <h3>About Us - Seaside Haven</h3>
+                <p>At Seaside Haven, we believe a hotel is more than just a place to stay — it's a space where memories begin, where peace finds you, and where comfort and care come naturally.</p>
+                <p>Nestled between the rolling mountains and the gentle sea, our story began with a simple dream: to create a sanctuary where nature, design, and hospitality live in harmony. Inspired by the effortless charm of Sardinian coastal towns, we've designed every corner ofSeaside Haven to reflect warmth, simplicity, and quiet luxury. From sunlit balconies to thoughtfully curated interiors, each room invites you to slow down and stay present.</p>
+                <p>Seaside Haven isn't about extravagance. It's about attention to detail, genuine service, and the kind of quiet that stays with you long after you leave. Here, you're not just a guest — you're part of a place that feels like it's always been waiting for you.</p>
+                <p>We are a small, independent hotel — and we wear that with pride. Our team is local, passionate, and deeply committed to making your stay exceptional. Whether it's recommending a hidden beach cove, preparing a sunset dinner, or simply making sure your morning coffee is just the way you like it, we're here to make your time with us feel effortless.</p>
+                <p>Come experience life by the sea — where mornings are slow, evenings are golden, and every moment is made to be savored.</p>
             </div>
             <div class="hitory-imgs">
                 <ul>
@@ -168,29 +207,53 @@
                     <li><img src="" alt="img2"></li>
                 </ul>
             </div>
-        </div>
-    </section>
-    <section class="staff">
+        
+      </section>
+      <section class="staff">
         <div class="staff-inf">
-            <h2>Our staff</h2>
+            <h2>Our Staff - The Heart of Seaside Haven</h2>
             <img src="" alt="photos">
-            <p>Our staff consists of professionals, which 
-                are clarified by professionals, many of them are professionals or professionals,
-                so you are in safe hands of professionals
+            <p>At Seaside Haven, our people are the soul of everything we do.
             </p>
+            <p>Each member of our team brings more than just experience — they bring heart, care, and a shared passion for hospitality. From the moment you arrive, you'll feel it: the smiles are genuine, the service is thoughtful, and every gesture comes from a place of pride in what we've created.</p>
+            <p>We're a small team, but that's our strength. We know our guests by name. We remember how you like your coffee, what view makes you feel most at peace, and how to make your stay feel uniquely yours. Behind the scenes, our chefs, housekeepers, and concierge staff work with quiet dedication to ensure every detail is just right — so all you have to do is relax.</p>
+            <p>Our team is local, deeply rooted in the culture and rhythm of this coastline. We love sharing our home with you, whether it's through a warm welcome, a hidden beach recommendation, or a handmade dessert passed down through generations.</p>
+            <p>We are more than staff. We are hosts, caretakers, storytellers — and above all, people who love what we do.</p>
+            <p>We are more than staff. We are hosts, caretakers, storytellers — and above all, people who love what we do.</p>
         </div>
+      </section>
                 <div class="endnote">
-            <h2>testimonials</h2>
-            <p>lorem impsum is random text generator</p>
+                  <h2>Testimonials</h2>
+                  <p>
+                    “Luxury doesn't have to be loud — Seaside Haven proves it. Quiet,
+                    warm, beautiful.”
+                  </p>
+                  <h3>— Jonas M. Berlin</h3>
         </div>
-    </section>
+
+    </main>
     <footer class="footer-wrap">
       <div class="footer-out">
         <div class="footer-sec first">
           <ul>
-            <li><p>email:<a href="mailto: example99@gmail.com">example99</a></p></li>
-            <li><p>Address:<a href="#">chavchavadze83, tbilisi, georgia</a></p></li>
-            <li style="display: flex; flex-wrap: wrap;"><p>Phone:<a href="tell:123-456-789">123-456-789</a></p></li>
+            <li>
+              <p>
+                <i class="fa-solid fa-envelope"></i>:
+                <a href="mailto: example99@gmail.com">email</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <i class="fa-solid fa-location-dot"></i>:
+                <a href="#">chavchavadze83, tbilisi, georgia</a>
+              </p>
+            </li>
+            <li style="display: flex; flex-wrap: wrap">
+              <p>
+                <i class="fa-solid fa-phone"></i>:
+                <a href="tell:123-456-789">123-456-789</a>
+              </p>
+            </li>
           </ul>
         </div>
         <div class="footer-sec second">
@@ -201,19 +264,21 @@
           </ul>
         </div>
         <div class="footer-sec third">
-            <ul>
-                <li><a href=""><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                <li><a href=""><i class="fa-brands fa-x-twitter"> twitter</i></a></li>
-            </ul>
+          <ul>
+            <li>
+              <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-x-twitter"> twitter</i></a>
+            </li>
+          </ul>
         </div>
         <div class="footer-sec fourth">
           <ul>
             <li><a href="">Provacy and policy</a></li>
-            <li><a href="">Subscribe to our new sellers</a></li>
-            <li><input type="email" name="emali">
-                <button type="submit" class="footer-submit">OK</button>
-            </li>
           </ul>
         </div>
       </div>

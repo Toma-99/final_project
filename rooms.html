@@ -11,44 +11,46 @@
     />
     <script src="scripts/booking.js" defer></script>
     <script src="./scripts/login.js" defer></script>
-    <script src="./scripts/facilities.js" defer></script>
+    <script src="./scripts/rooms.js" defer></script>
     <title>Document</title>
   </head>
   <body>
-    <section class="hero">
-      <header class="header-wrapper">
-        <div class="header-elements">
-          <a href="./index.html"><img src="" alt="logo" /></a>
-          <nav class="navigation">
-            <ul class="ul-elements">
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./about_us.html">About Us</a></li>
-              <li><a href="./rooms.html">Rooms</a></li>
-              <li><a href="./contact_us.html">Contact Us</a></li>
-            </ul>
-          </nav>
-          <div
-            class="login-btn btn"
-            id="login-btn"
-            role="button"
-            tabindex="0"
-            onclick="handleClick(event)"
-          >
-            Log In
-          </div>
-          <div class="burger-bar" role="button" tabindex="0">
-            <div class="upper"></div>
-            <div class="mid"></div>
-            <div class="lower"></div>
-          </div>
+    <header class="header-wrapper">
+      <div class="header-elements">
+        <a href="./index.html"><img src="" alt="logo" /></a>
+        <nav class="navigation">
+          <ul class="ul-elements">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./rooms.html">Rooms</a></li>
+            <li><a href="./contact_us.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div
+          class="login-btn btn"
+          id="login-btn"
+          role="button"
+          tabindex="0"
+          onclick="handleClick(event)"
+        >
+          Log In
         </div>
-      </header>
+        <div class="burger-bar" role="button" tabindex="0">
+          <div class="upper"></div>
+          <div class="mid"></div>
+          <div class="lower"></div>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
       <div class="welcome-txt">
+        <h1>Your Room by the Sea</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-          laboriosam earum non suscipit sint obcaecati modi! Officiis corrupti
-          beatae vero tempore doloremque ipsam. Et sapiente voluptate quibusdam
-          sunt, voluptas laborum.
+          Every room at Seaside Haven is designed to be your personal retreat —
+          a quiet space where comfort meets the coast. Wake to the sound of
+          waves, unwind in soft light, and feel the peace of the shoreline just
+          beyond your window. Whether you're seeking simple serenity or refined
+          indulgence, your perfect stay begins here.
         </p>
       </div>
       <div class="login-wrap" id="login"></div>
@@ -62,122 +64,129 @@
             <p>or login</p>
           </div>
           <form class="book-form">
-            <div class="outer">
-              <div class="input-container">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="usernamefield"
-                  name="name"
-                  maxlength="25"
-                  required
-                />
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
+            <div class="scrollbar-container">
+              <div class="outer">
+                <div class="input-container">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="usernamefield"
+                    name="name"
+                    maxlength="25"
+                    required
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
+                <div class="input-container">
+                  <label for="surname">Surname</label>
+                  <input
+                    type="text"
+                    id="surnamefield"
+                    name="surname"
+                    maxlength="25"
+                    required
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
               </div>
-              <div class="input-container">
-                <label for="surname">Surname</label>
-                <input
-                  type="text"
-                  id="surnamefield"
-                  name="surname"
-                  maxlength="25"
-                  required
-                />
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
+              <div class="outer">
+                <div class="input-container">
+                  <label for="tel">Phone number</label>
+                  <input
+                    type="tel"
+                    id="telfield"
+                    name="tel"
+                    maxlength="15"
+                    required
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
+                <div class="input-container">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="emailfield"
+                    name="email"
+                    maxlength="25"
+                    required
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
               </div>
-            </div>
-            <div class="outer">
-              <div class="input-container">
-                <label for="tel">Phone number</label>
-                <input
-                  type="tel"
-                  id="telfield"
-                  name="tel"
-                  maxlength="15"
-                  required
-                />
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
+              <div class="outer">
+                <div class="input-container">
+                  <label for="persons">Persons (3 max)</label>
+                  <input
+                    type="number"
+                    id="personsfield"
+                    name="persons"
+                    min="0"
+                    max="3"
+                    required
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
+                <div class="input-container">
+                  <label for="Room">Room</label>
+                  <select id="roomfield" name="room" required>
+                    <option value="">Select Room</option>
+                    <option value="room1">Room 1</option>
+                    <option value="room2">Room 2</option>
+                    <option value="room3">Room 3</option>
+                    <option value="room4">Room 4</option>
+                  </select>
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
               </div>
-              <div class="input-container">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="emailfield"
-                  name="email"
-                  maxlength="25"
-                  required
-                />
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
+              <div class="outer">
+                <div class="input-container">
+                  <label for="checkin">Check in</label>
+                  <input
+                    type="date"
+                    id="checkinfield"
+                    name="checkin"
+                    required
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
+                <div class="input-container">
+                  <label for="checkout">Check Out</label>
+                  <input
+                    type="date"
+                    id="checkoutfield"
+                    name="checkout"
+                    required
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
               </div>
-            </div>
-            <div class="outer">
-              <div class="input-container">
-                <label for="persons">Persons (3 max)</label>
-                <input
-                  type="number"
-                  id="personsfield"
-                  name="persons"
-                  min="0"
-                  max="3"
-                  required
-                />
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
-              </div>
-              <div class="input-container">
-                <label for="Room">Room</label>
-                <select id="roomfield" name="room" required>
-                  <option value="">Select Room</option>
-                  <option value="room1">Room 1</option>
-                  <option value="room2">Room 2</option>
-                  <option value="room3">Room 3</option>
-                  <option value="room4">Room 4</option>
-                </select>
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
-              </div>
-            </div>
-            <div class="outer">
-              <div class="input-container">
-                <label for="checkin">Check in</label>
-                <input type="date" id="checkinfield" name="checkin" required />
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
-              </div>
-              <div class="input-container">
-                <label for="checkout">Check Out</label>
-                <input
-                  type="date"
-                  id="checkoutfield"
-                  name="checkout"
-                  required
-                />
-                <i class="fas fa-check-circle"></i>
-                <i class="fas fa-exclamation-circle"></i>
-                <small>Error message</small>
-              </div>
-            </div>
-            <div class="outer">
-              <div class="price">Total Price: <strong>$0.00</strong></div>
-              <div class="input-container">
-                <label>
-                  <input type="checkbox" name="terms" required id="check" />
-                  I agree to the <a href="#">terms and conditions</a>
-                </label>
-              </div>
-              <div class="btn-container">
-                <button type="submit">Submit</button>
+              <div class="outer">
+                <div class="price">Total Price: <strong>$0.00</strong></div>
+                <div class="input-container">
+                  <label>
+                    <input type="checkbox" name="terms" required id="check" />
+                    I agree to the <a href="#">terms and conditions</a>
+                  </label>
+                </div>
+                <div class="btn-container">
+                  <button type="submit">Submit</button>
+                </div>
               </div>
             </div>
           </form>
@@ -193,10 +202,16 @@
         </div>
       </div>
     </section>
-    <section class="rooms-sec">
+    <main class="rooms-slide">
       <div class="rooms-info">
         <div class="room-content" id="rooms1">
-          <div class="room-img"><img src="" alt="img1" /></div>
+          <div class="room-img">
+            <img
+              src="./images/Gemini_Generated_Image_ov01bcov01bcov01.png"
+              class="roomimg"
+              alt="img1"
+            />
+          </div>
           <div class="room-desc">
             <div class="line1">
               <h3>room name</h3>
@@ -227,7 +242,13 @@
       </div>
       <div class="rooms-info">
         <div class="room-content" id="rooms2">
-          <div class="room-img"><img src="" alt="img1" /></div>
+          <div class="room-img">
+            <img
+              src="./images/openart-image_V2NCHFj-_1751653531159_raw.jpg"
+              alt="img1"
+              class="roomimg"
+            />
+          </div>
           <div class="room-desc">
             <div class="line1">
               <h3>room name</h3>
@@ -258,7 +279,13 @@
       </div>
       <div class="rooms-info">
         <div class="room-content" id="rooms3">
-          <div class="room-img"><img src="" alt="img1" /></div>
+          <div class="room-img">
+            <img
+              src="./images/fotor-ai-20250704223526.jpg"
+              alt="img1"
+              class="roomimg"
+            />
+          </div>
           <div class="room-desc">
             <div class="line1">
               <h3>room name</h3>
@@ -289,7 +316,13 @@
       </div>
       <div class="rooms-info">
         <div class="room-content" id="rooms4">
-          <div class="room-img"><img src="" alt="img1" /></div>
+          <div class="room-img">
+            <img
+              src="./images/openart-image_zvx7l1me_1751653530210_raw.jpg"
+              class="roomimg"
+              alt="img1"
+            />
+          </div>
           <div class="room-desc">
             <div class="line1">
               <h3>room name</h3>
@@ -318,19 +351,28 @@
           </div>
         </div>
       </div>
-    </section>
+    </main>
     <footer class="footer-wrap">
       <div class="footer-out">
         <div class="footer-sec first">
           <ul>
             <li>
-              <p>email:<a href="mailto: example99@gmail.com">example99</a></p>
+              <p>
+                <i class="fa-solid fa-envelope"></i>:
+                <a href="mailto: example99@gmail.com">email</a>
+              </p>
             </li>
             <li>
-              <p>Address:<a href="#">chavchavadze83, tbilisi, georgia</a></p>
+              <p>
+                <i class="fa-solid fa-location-dot"></i>:
+                <a href="#">chavchavadze83, tbilisi, georgia</a>
+              </p>
             </li>
             <li style="display: flex; flex-wrap: wrap">
-              <p>Phone:<a href="tell:123-456-789">123-456-789</a></p>
+              <p>
+                <i class="fa-solid fa-phone"></i>:
+                <a href="tell:123-456-789">123-456-789</a>
+              </p>
             </li>
           </ul>
         </div>
@@ -357,11 +399,6 @@
         <div class="footer-sec fourth">
           <ul>
             <li><a href="">Provacy and policy</a></li>
-            <li><a href="">Subscribe to our new sellers</a></li>
-            <li>
-              <input type="email" name="emali" />
-              <button type="submit" class="footer-submit">OK</button>
-            </li>
           </ul>
         </div>
       </div>

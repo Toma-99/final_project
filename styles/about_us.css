@@ -1,0 +1,605 @@
+.hero {
+  height: 100vh;
+  background-image: url("../images/background_image1st.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 20px 5%;
+  z-index: 1001;
+}
+/* .logo {
+    width: 200px;
+    height: ;
+  } */
+.header-elements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+}
+
+.navigation {
+  display: block;
+}
+.ul-elements {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.login-btn {
+  width: 100px;
+  height: 40px;
+  background: darkgoldenrod;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+  cursor: pointer;
+}
+
+.burger-bar {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+  position: relative;
+  display: none;
+}
+
+.burger-bar div {
+  background-color: #fff;
+  height: 2px;
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.upper {
+  top: 30%;
+}
+
+.mid {
+  top: 50%;
+}
+
+.lower {
+  top: 70%;
+}
+
+.welcome-txt {
+  width: 500px;
+  height: 200px;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -ms-transform: translate(-90%, -50%);
+  transform: translate(-90%, -50%);
+  display: block;
+}
+
+.lower-btns {
+  width: 80px;
+  height: 150px;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pop-up-wrapper {
+  position: absolute;
+  top: calc(50% + 25px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 100%;
+  max-width: 100vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  display: none;
+  overflow: hidden;
+}
+.pop-up {
+  max-height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  padding: 24px 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.scrollbar-container {
+  max-height: 350px; /* adjust as needed */
+  overflow-y: auto;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.suggest {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.suggest h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.suggest p {
+  font-size: 14px;
+  color: black;
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+}
+
+.outer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.input-container {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.input-container label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 4px;
+}
+
+/* Updated Input and Select Styling for consistency and validation colors */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.2s; /* Smooth border color transition */
+  height: 40px; /* Explicit height for better consistency */
+  line-height: 1.5; /* Helps align text and icons */
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+select {
+  background-color: #fff;
+}
+
+/* Validation success/error border colors */
+.input-container.success input,
+.input-container.success select {
+  border-color: #2ecc71; /* Green for success */
+}
+
+.input-container.error input,
+.input-container.error select {
+  border-color: #e74c3c; /* Red for error */
+}
+
+/* Price & Terms */
+.price {
+  flex: 1 1 45%;
+  font-weight: bold;
+  font-size: 16px;
+  align-self: center;
+  color: #000;
+}
+
+.input-container input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.input-container a {
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+/* Submit Button Centered */
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.65rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 200px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+/* Error Message Styling (NOTE: This class is not applied by the fixed JS, but kept if you use it elsewhere) */
+.error-message {
+  background-color: #fcf4a3;
+  color: black;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* === Validation Icon Styling for Booking Form (.input-container) === */
+.input-container i.fas {
+  position: absolute;
+  top: 50%; /* Vertically centers the icon */
+  transform: translateY(
+    -50%
+  ); /* Pulls the icon up by half its height for perfect center */
+  right: 12px; /* Default right position for icons */
+  font-size: 16px;
+  visibility: hidden; /* Default: hidden, JS/class will make it visible */
+  transition: 0.2s ease-in-out;
+  pointer-events: none; /* Allows clicks to pass through to the input */
+  z-index: 2;
+}
+
+/* Specific adjustment for icons in date input fields to avoid covering calendar icon */
+.input-container input[type="date"] + i.fas {
+  right: 35px; /* Adjust this value as needed to clear the native calendar icon */
+}
+
+/* Ensure default invisibility for both check and exclamation icons */
+.input-container i.fa-check-circle,
+.input-container i.fa-exclamation-circle {
+  visibility: hidden;
+}
+
+.input-container.error i.fa-exclamation-circle {
+  visibility: visible; /* Show exclamation on error */
+  color: #e74c3c; /* Error color */
+}
+
+.input-container.success i.fa-check-circle {
+  visibility: visible; /* Show checkmark on success */
+  color: #2ecc71; /* Success color */
+}
+
+/* --- Your existing .input-container.error i.fa-eye rule (leaving as is, likely for login form) --- */
+.input-container.error i.fa-eye {
+  right: 32px;
+}
+
+.input-container small {
+  font-size: 12px;
+  color: #e74c3c;
+  margin-top: 4px;
+  visibility: hidden; /* Hidden by default, JS/class will make it visible */
+}
+
+.input-container.error small {
+  visibility: visible; /* Show message on error */
+}
+.login-wrap {
+  position: absolute; /* So it covers the whole viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 40%;
+  max-width: 100vw;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4); /* optional dimmed background */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+}
+
+.login-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.login-fields div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-fields div input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 2px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  right: 15px;
+  transition: 0.3s;
+}
+
+.form-control i.fa-eye {
+  visibility: visible;
+  cursor: pointer;
+  color: #000;
+}
+
+.form-control i.fa-eye.error {
+  right: 20px;
+}
+
+.form-control.error i.fa-eye-slash {
+  right: 20px;
+}
+
+.form-control i.fa-eye-slash {
+  visibility: hidden;
+  cursor: pointer;
+  color: black;
+}
+
+.form-control.success i.fa-check-circle {
+  visibility: visible;
+  color: #2ecc71;
+  right: 15px;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: #e74c3c;
+  right: 15px;
+}
+
+.form-control small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 2px;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.login-form button {
+  background: #8e44ad;
+  border: 2px solid #8e44ad;
+  border-radius: 2px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.registration-button {
+  width: 135px;
+  height: 40px;
+  background: skyblue;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+  cursor: pointer;
+}
+
+.scroll-btn {
+  margin: 0 auto;
+  position: absolute;
+  top: 80%;
+  cursor: pointer;
+}
+
+.about-info {
+  margin-top: 3em;
+}
+
+.history {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.history-txt {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 2.5em;
+  row-gap: 20px;
+}
+
+.history-imgs ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.staff {
+  margin-top: 3em;
+}
+
+.staff-inf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.rooms-sec {
+  margin-top: 3em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.endnote {
+  padding-top: 2.5em;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-wrap {
+  width: 100%;
+  background-color: gainsboro;
+  margin-top: 3em;
+}
+
+.footer-out {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-sec {
+  margin: 3em 0;
+  padding: 0 2em;
+}
+
+.footer-sec li {
+  padding-top: 1em;
+}
+
+.load-btn {
+  width: 135px;
+  height: 40px;
+  background: darkgoldenrod;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+}
+
+.text-side {
+  justify-items: center;
+}
+
+.logo-wrap {
+  width: 130px;
+  box-sizing: border-box;
+  height: 35px;
+  object-fit: cover;
+}

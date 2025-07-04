@@ -1,216 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/index_style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/index_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <script src="scripts/booking.js" defer></script>
     <script src="./scripts/login.js" defer></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <div class="header-elements">
+        <a href="./index.html"
+          ><img src="./images" alt="logo" class="logo"
+        /></a>
+        <nav class="navigation">
+          <ul class="ul-elements">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./rooms.html">Rooms</a></li>
+            <li><a href="./contact_us.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div
+          class="login-btn btn"
+          id="login-btn"
+          role="button"
+          tabindex="0"
+          onclick="handleClick(event)"
+        >
+          Log In
+        </div>
+        <div class="burger-bar" role="button" tabindex="0">
+          <div class="upper"></div>
+          <div class="mid"></div>
+          <div class="lower"></div>
+        </div>
+      </div>
+    </header>
     <section class="hero">
-        <header class="header-wrapper">
-            <div class="header-elements">
-                <a href="./index.html"><img src="" alt="logo"></a>
-                <nav class="navigation">
-                    <ul class="ul-elements">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./about_us.html">About Us</a></li>
-                        <li><a href="./rooms.html">Rooms</a></li>
-                        <li><a href="./contact_us.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-                <div class="login-btn btn" id="login-btn" role="button" tabindex="0" onclick="handleClick(event)">Log In</div>
-                <div class="burger-bar" role="button" tabindex="0">
-                    <div class="upper"></div>
-                    <div class="mid"></div>
-                    <div class="lower"></div>
+      <div class="welcome-txt">
+        <h1>Welcome to Seaside Haven</h1>
+        <h3>Where the Mountains Meet the Sea</h3>
+        <p>
+          Tucked between golden sands and rugged peaks, Seaside Haven invites
+          you to unwind in a place where time slows down. Wake up to the gentle
+          sound of waves, breathe in the salty breeze, and let each sunset paint
+          your perfect escape. Whether you're here for peace, adventure, or a
+          bit of both — your coastal sanctuary awaits.
+        </p>
+      </div>
+      <div class="login-wrap" id="login"></div>
+      <div class="pop-up-wrapper">
+        <div class="pop-up">
+          <button class="close-btn" aria-label="Close Booking Form">
+            &times;
+          </button>
+          <div class="suggest">
+            <h3>please fill the form</h3>
+            <p>or login</p>
+          </div>
+          <form class="book-form">
+            <div class="scrollbar-container">
+              <div class="outer">
+                <div class="input-container">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="usernamefield"
+                    name="name"
+                    maxlength="25"
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
                 </div>
-            </div>
-        </header>
-        <div class="welcome-txt">
-            <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-             Omnis laboriosam earum non suscipit sint obcaecati modi! 
-             Officiis corrupti beatae vero tempore doloremque ipsam. 
-             Et sapiente voluptate quibusdam sunt, voluptas laborum.
-            </p>
-        </div>
-        <div class="login-wrap" id="login"></div>
-        <div class="pop-up-wrapper">
-            <div class="pop-up">
-              <button class="close-btn" aria-label="Close Booking Form">
-                &times;
-              </button>
-              <div class="suggest">
-                <h3>please fill the form</h3>
-                <p>or login</p>
+                <div class="input-container">
+                  <label for="surname">Surname</label>
+                  <input
+                    type="text"
+                    id="surnamefield"
+                    name="surname"
+                    maxlength="25"
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
               </div>
-              <form class="book-form">
-                <div class="outer">
-                  <div class="input-container">
-                    <label for="name">Name</label>
-                    <input
-                      type="text"
-                      id="usernamefield"
-                      name="name"
-                      maxlength="25"
-                      required
-                    />
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
-                  </div>
-                  <div class="input-container">
-                    <label for="surname">Surname</label> <input
-                      type="text"
-                      id="surnamefield"
-                      name="surname"
-                      maxlength="25"
-                      required
-                    />
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
-                  </div>
+              <div class="outer">
+                <div class="input-container">
+                  <label for="tel">Phone number</label>
+                  <input type="tel" id="telfield" name="tel" maxlength="15" />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
                 </div>
-                <div class="outer">
-                  <div class="input-container">
-                    <label for="tel">Phone number</label> <input
-                      type="tel"
-                      id="telfield"
-                      name="tel"
-                      maxlength="15" 
-                      required
-                    />
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
-                  </div>
-                  <div class="input-container">
-                    <label for="email">Email</label> <input
-                      type="email"
-                      id="emailfield"
-                      name="email"
-                      maxlength="25" 
-                      required
-                    />
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
-                  </div>
+                <div class="input-container">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="emailfield"
+                    name="email"
+                    maxlength="25"
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
                 </div>
-                <div class="outer">
-                    <div class="input-container">
-                        <label for="persons">Persons (3 max)</label> <input
-                          type="number"
-                          id="personsfield"
-                          name="persons"
-                          min="0"
-                          max="3"
-                          required
-                        />
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
-                    </div>
-                    <div class="input-container">
-                        <label for="Room">Room</label>
-                        <select id="roomfield" name="room" required>
-                            <option value="">Select Room</option>
-                            <option value="room1">Room 1</option>
-                            <option value="room2">Room 2</option>
-                            <option value="room3">Room 3</option>
-                            <option value="room4">Room 4</option>
-                        </select>
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
-                    </div>
+              </div>
+              <div class="outer">
+                <div class="input-container">
+                  <label for="persons">Persons (3 max)</label>
+                  <input
+                    type="number"
+                    id="personsfield"
+                    name="persons"
+                    min="0"
+                    max="3"
+                  />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
                 </div>
-                <div class="outer">
-                    <div class="input-container">
-                        <label for="checkin">Check in</label>
-                        <input type="date" id="checkinfield" name="checkin" required />
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
-                    </div>
-                    <div class="input-container">
-                        <label for="checkout">Check Out</label>
-                        <input type="date" id="checkoutfield" name="checkout" required />
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i> <small>Error message</small>
-                    </div>
+                <div class="input-container">
+                  <label for="Room">Room</label>
+                  <select id="roomfield" name="room">
+                    <option value="">Select Room</option>
+                    <option value="room1">Room 1</option>
+                    <option value="room2">Room 2</option>
+                    <option value="room3">Room 3</option>
+                    <option value="room4">Room 4</option>
+                  </select>
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
                 </div>
-                <div class="outer">
-                    <div class="price">
-                        Total Price: <strong>$0.00</strong>
-                    </div>
-                    <div class="input-container">
-                        <label>
-                            <input type="checkbox" name="terms" required id="check"/>
-                            I agree to the <a href="#">terms and conditions</a>
-                        </label>
-                    </div>
-                    <div class="btn-container">
-                        <button type="submit">Submit</button>
-                    </div>
+              </div>
+              <div class="outer">
+                <div class="input-container">
+                  <label for="checkin">Check in</label>
+                  <input type="date" id="checkinfield" name="checkin" />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
                 </div>
-              </form>
+                <div class="input-container">
+                  <label for="checkout">Check Out</label>
+                  <input type="date" id="checkoutfield" name="checkout" />
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                  <small>Error message</small>
+                </div>
+              </div>
+              <div class="outer">
+                <div class="price">Total Price: <strong>$0.00</strong></div>
+                <div class="input-container">
+                  <label>
+                    <input type="checkbox" name="terms" required id="check" />
+                    I agree to the <a href="#">terms and conditions</a>
+                  </label>
+                </div>
+                <div class="btn-container">
+                  <button type="submit">Submit</button>
+                </div>
+              </div>
             </div>
+          </form>
         </div>
-        <div class="lower-btns">
-            <div class="registration-button btn" role="button" tabindex="0" onclick="handleClick(event)">
-                <img src="./images/Group 37.png" alt="register" class="reg-img">
-                <p>Book</p>
-            </div>
-            <div class="scroll-btn btn" id="book" role="button" tabindex="0" onclick="handleClick(event)">
-                <img src="./images/Subtraction 2.png" alt="scroll">
-            </div>
+      </div>
+      <div class="lower-btns">
+        <div
+          class="registration-button btn"
+          role="button"
+          tabindex="0"
+          onclick="handleClick(event)"
+        >
+          <img src="./images/Group 37.png" alt="register" class="reg-img" />
+          <p>Book</p>
         </div>
+        <div
+          class="scroll-btn btn"
+          id="book"
+          role="button"
+          tabindex="0"
+          onclick="handleClick(event)"
+        >
+          <img src="./images/Subtraction 2.png" alt="scroll" />
+        </div>
+      </div>
     </section>
-    <section class="info">
-        <div class="description">
-            <div class="text-side">
-                <div class="description-txt">
-                    <h3>LOREM IPSUM</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores 
-                        sequi nobis ea, amet vero sapiente excepturi itaque voluptas voluptates 
-                        repellendus quos, atque necessitatibus non maxime odio laboriosam id molestias 
-                        suscipit?</p>
-                </div>
-                <div class="load-btn first-btn">Load more</div>
-            </div>
-            <div class="description-imgs">
-                <img src="./images/360_F_29133877_bfA2n7cWV53fto2BomyZ6pyRujJTBwjd.jpg" alt="someimage">
-            </div>
-            <div class="extend"></div>
+    <main class="info">
+      <section class="description">
+        <div class="text-side">
+          <div class="description-txt">
+            <h3>Luxury Redefined</h3>
+            <p>
+              At Seaside Haven, luxury isn’t just about grandeur — it’s the
+              subtle art of comfort woven into every detail. From thoughtfully
+              designed rooms with panoramic views to personalized service that
+              anticipates your every need, here you experience elegance in its
+              purest form. Indulge in moments that feel effortlessly refined,
+              where sophistication meets the soothing rhythm of the sea.
+            </p>
+          </div>
+          <div class="load-btn first-btn">Load more</div>
         </div>
-        <div class="usr-story">
-            <div class="usr-story-imgs">
-                <img src="./images/7182fe6792fc1f646d8244ae03a80506.jpg" alt="someimage">
-            </div>
-            <div class="text-side">
-                <div class="usr-story-txt">
-                    <h3>LOREM IPSUM</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores 
-                        sequi nobis ea, amet vero sapiente excepturi itaque voluptas voluptates 
-                        repellendus quos, atque necessitatibus non maxime odio laboriosam id molestias 
-                        suscipit?</p>
-                </div>
-                <div class="load-btn second-btn btn">Load more</div>
-            </div>
-            <div class="extend"></div>
+        <div class="description-imgs">
+          <img src="" alt="someimage" />
         </div>
-        <div class="endnote">
-            <h2>testimonials</h2>
-            <p>lorem impsum is random text generator</p>
+        <div class="extend"></div>
+      </section>
+      <section class="usr-story">
+        <div class="usr-story-imgs">
+          <img src="" alt="someimage" />
         </div>
-    </section>
+        <div class="text-side">
+          <div class="usr-story-txt">
+            <h3>A Place to Simply Be</h3>
+            <p>
+              We believe in slow mornings, salty air, and sunlit walks by the
+              shore. At Seaside Haven, every breeze carries the scent of
+              freedom, and every view reminds you to breathe deeper. Whether its
+              t'he sparkle of the sea or the stillness of the mountains, this
+              place doesn't rush — and neither should you.
+            </p>
+          </div>
+          <div class="load-btn second-btn btn">Load more</div>
+        </div>
+        <div class="extend"></div>
+      </section>
+      <div class="endnote">
+        <h2>Testimonials</h2>
+        <p>
+          “Luxury doesn't have to be loud — Seaside Haven proves it. Quiet,
+          warm, beautiful.”
+        </p>
+        <h3>— Jonas M. Berlin</h3>
+      </div>
+    </main>
     <footer class="footer-wrap">
       <div class="footer-out">
         <div class="footer-sec first">
           <ul>
-            <li><p>email:<a href="mailto: example99@gmail.com">example99</a></p></li>
-            <li><p>Address:<a href="#">chavchavadze83, tbilisi, georgia</a></p></li>
-            <li style="display: flex; flex-wrap: wrap;"><p>Phone:<a href="tell:123-456-789">123-456-789</a></p></li>
+            <li>
+              <p>
+                <i class="fa-solid fa-envelope"></i>:
+                <a href="mailto: example99@gmail.com">email</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <i class="fa-solid fa-location-dot"></i>:
+                <a href="#">chavchavadze83, tbilisi, georgia</a>
+              </p>
+            </li>
+            <li style="display: flex; flex-wrap: wrap">
+              <p>
+                <i class="fa-solid fa-phone"></i>:
+                <a href="tell:123-456-789">123-456-789</a>
+              </p>
+            </li>
           </ul>
         </div>
         <div class="footer-sec second">
@@ -221,22 +276,24 @@
           </ul>
         </div>
         <div class="footer-sec third">
-            <ul>
-                <li><a href=""><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                <li><a href=""><i class="fa-brands fa-x-twitter"> twitter</i></a></li>
-            </ul>
+          <ul>
+            <li>
+              <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-x-twitter"> twitter</i></a>
+            </li>
+          </ul>
         </div>
         <div class="footer-sec fourth">
           <ul>
             <li><a href="">Provacy and policy</a></li>
-            <li>Subscribe to our new sellers</li>
-            <li><input type="email" name="emali">
-                <button type="submit" class="footer-submit btn">OK</button>
-            </li>
           </ul>
         </div>
       </div>
     </footer>
-</body>
+  </body>
 </html>

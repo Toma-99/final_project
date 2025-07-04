@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
-
 .hero {
   height: 100vh;
-  background-image: url("../images/360_F_29133877_bfA2n7cWV53fto2BomyZ6pyRujJTBwjd.jpg");
+  background-image: url("../images/background_image1st.png");
   background-size: cover;
   background-position: center;
   color: white;
@@ -11,14 +9,24 @@
 }
 
 .header-wrapper {
-  padding: 20px;
-  position: sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 20px 5%;
+  z-index: 1001;
 }
-
+/* .logo {
+    width: 200px;
+    height: ;
+  } */
 .header-elements {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: transparent;
 }
 
 .navigation {
@@ -28,7 +36,6 @@
   display: flex;
   width: 300px;
   justify-content: space-between;
-  color: aliceblue;
 }
 
 .login-btn {
@@ -107,10 +114,16 @@
   z-index: 1000;
   width: 100%;
   max-width: 100vw;
+  max-height: 80vh;
+  overflow-y: auto;
   padding: 20px;
   display: none;
+  overflow: hidden;
 }
 .pop-up {
+  max-height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
   position: relative;
   background-color: #fff;
   border-radius: 16px;
@@ -118,6 +131,12 @@
   padding: 24px 32px;
   max-width: 800px;
   margin: 0 auto;
+}
+.scrollbar-container {
+  max-height: 350px;
+  overflow-y: auto;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 
 .close-btn {
@@ -149,10 +168,10 @@
 .book-form {
   display: flex;
   flex-direction: column;
+  height: 100%;
   gap: 20px;
 }
 
-/* Align rows of inputs */
 .outer {
   width: 100%;
   display: flex;
@@ -161,7 +180,6 @@
   flex-wrap: wrap;
 }
 
-/* Label + input container */
 .input-container {
   flex: 1 1 45%;
   display: flex;
@@ -377,8 +395,7 @@ button[type="submit"]:hover {
 .form-control {
   margin-bottom: 10px;
   padding-bottom: 20px;
-  /* --- FIX 1: Provide positioning context for absolute children --- */
-  position: relative; /* Added: Essential for positioning icons and small text */
+  position: relative;
 }
 
 .form-control label {
@@ -394,7 +411,6 @@ button[type="submit"]:hover {
   font-size: 14px;
   padding: 10px;
   width: 100%;
-  /* position: relative; Removed: Not needed here and can interfere */
 }
 
 .form-control.success input {
@@ -405,15 +421,12 @@ button[type="submit"]:hover {
   border-color: #e74c3c;
 }
 
-/* --- FIX 2: Icon Positioning --- */
 .form-control i {
   visibility: hidden;
   position: absolute;
-  top: 50%; /* Changed: Center vertically */
-  transform: translateY(
-    -50%
-  ); /* Added: Pull icon up by half its height for perfect center */
-  right: 15px; /* Adjusted: More consistent spacing from right edge */
+  top: 60%;
+  transform: translateY(-50%);
+  right: 15px;
   transition: 0.3s;
 }
 
@@ -424,7 +437,6 @@ button[type="submit"]:hover {
 }
 
 .form-control i.fa-eye.error {
-  /* No longer need separate right value, let general rule apply or adjust if desired specific offset */
   right: 20px;
 }
 
@@ -441,31 +453,26 @@ button[type="submit"]:hover {
 .form-control.success i.fa-check-circle {
   visibility: visible;
   color: #2ecc71;
-  /* top: 36px; Removed: Centering handled by general i rule */
-  right: 15px; /* Adjusted: Consistent with other icons */
+  right: 15px;
 }
 
 .form-control.error i.fa-exclamation-circle {
-  /* Note: Your JS adds 'fa-exclamation', not 'fa-exclamation-circle'. */
-  /* If you mean the 'fa-exclamation' icon, its positioning is now handled by .form-control i */
   visibility: visible;
   color: #e74c3c;
-  /* top: 50px; Removed: Centering handled by general i rule */
-  right: 15px; /* Adjusted: Consistent with other icons */
+  right: 15px;
 }
 
-/* --- FIX 3: Error Message Visibility and Positioning --- */
 .form-control small {
   visibility: hidden;
-  position: absolute; /* Keep absolute as per your original code */
-  bottom: 0; /* Position at the bottom of the form-control div */
+  position: absolute;
+  bottom: 0;
   left: 0;
-  width: 100%; /* Ensure it takes up available width */
-  padding-top: 2px; /* Small padding from the input above if visually desired */
+  width: 100%;
+  padding-top: 2px;
 }
 
 .form-control.error small {
-  visibility: visible; /* Now it will become visible when .error class is added */
+  visibility: visible;
   color: #e74c3c;
 }
 
@@ -501,20 +508,28 @@ button[type="submit"]:hover {
   cursor: pointer;
 }
 
-.rooms-sec {
+.rooms-slide {
+  margin: 0 auto;
   margin-top: 3em;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background-color: #ccc;
+  padding: 20px 0 20px 0;
+  border-radius: 20px;
 }
 
 .room-content {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   display: flex;
   padding: 20px;
   border: 2px solid grey;
+  border-radius: 10px;
+  align-items: center;
+  background-color: white;
+  box-shadow: #ccc;
 }
 
 .line1 {
@@ -586,4 +601,14 @@ button[type="submit"]:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+.room-img {
+  padding-right: 20px;
+}
+.roomimg {
+  width: 250px;
+  height: 200px;
+  object-fit: inherit;
+  border-radius: 5px;
 }

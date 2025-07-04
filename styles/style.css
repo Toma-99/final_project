@@ -653,6 +653,7 @@ button[type="submit"]:hover {
 
 .help-inp {
   padding: 10px;
+  padding-right: 50px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -661,4 +662,66 @@ button[type="submit"]:hover {
 .txtarea {
   resize: none;
   height: 80px;
+}
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.help-inp {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e8f0fe;
+  padding-right: 40px; /* space for icon */
+}
+
+/* Common styles for icons */
+.form-group i {
+  position: absolute;
+  right: 10px;
+  top: 60%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  visibility: hidden;
+}
+
+/* Success & error icon coloring */
+.form-group.success i.fa-check-circle {
+  color: green;
+  visibility: visible;
+}
+
+.form-group.error i.fa-exclamation-circle {
+  top: 50%;
+  color: red;
+  visibility: visible;
+}
+
+/* Success input border */
+.form-group.success .help-inp {
+  border: 2px solid green;
+}
+
+/* Error input border */
+.form-group.error .help-inp {
+  border: 2px solid red;
+}
+
+/* Error message styling */
+.form-group small {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  visibility: hidden;
+}
+
+.msgarea i {
+  top: 35%;
+}
+
+.roomimg {
+  width: 50px;
 }
