@@ -17,14 +17,14 @@
     />
     <script src="scripts/booking.js" defer></script>
     <script src="./scripts/login.js" defer></script>
-    <script src="./scripts/scripts.js" de></script>
+    <script src="./scripts/scripts.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <header class="header-wrapper">
       <div class="header-elements">
         <a href="./index.html"
-          ><img src="./images" alt="logo" class="logo"
+          ><img src="./images/logo.png" alt="logo" class="logo-wrap"
         /></a>
         <nav class="navigation">
           <ul class="ul-elements">
@@ -34,13 +34,7 @@
             <li><a href="./contact_us.html">Contact Us</a></li>
           </ul>
         </nav>
-        <div
-          class="login-btn btn"
-          id="login-btn"
-          role="button"
-          tabindex="0"
-          onclick="handleClick(event)"
-        >
+        <div class="login-btn btn" id="login-btn" role="button" tabindex="0">
           Log In
         </div>
         <div class="burger-bar" role="button" tabindex="0">
@@ -83,8 +77,6 @@
                     name="name"
                     maxlength="25"
                   />
-                  <i class="fas fa-check-circle"></i>
-                  <i class="fas fa-exclamation-circle"></i>
                   <small>Error message</small>
                 </div>
                 <div class="input-container">
@@ -95,8 +87,6 @@
                     name="surname"
                     maxlength="25"
                   />
-                  <i class="fas fa-check-circle"></i>
-                  <i class="fas fa-exclamation-circle"></i>
                   <small>Error message</small>
                 </div>
               </div>
@@ -104,8 +94,6 @@
                 <div class="input-container">
                   <label for="tel">Phone number</label>
                   <input type="tel" id="telfield" name="tel" maxlength="15" />
-                  <i class="fas fa-check-circle"></i>
-                  <i class="fas fa-exclamation-circle"></i>
                   <small>Error message</small>
                 </div>
                 <div class="input-container">
@@ -116,8 +104,6 @@
                     name="email"
                     maxlength="25"
                   />
-                  <i class="fas fa-check-circle"></i>
-                  <i class="fas fa-exclamation-circle"></i>
                   <small>Error message</small>
                 </div>
               </div>
@@ -131,8 +117,6 @@
                     min="0"
                     max="3"
                   />
-                  <i class="fas fa-check-circle"></i>
-                  <i class="fas fa-exclamation-circle"></i>
                   <small>Error message</small>
                 </div>
                 <div class="input-container">
@@ -144,8 +128,6 @@
                     <option value="room3">Room 3</option>
                     <option value="room4">Room 4</option>
                   </select>
-                  <i class="fas fa-check-circle"></i>
-                  <i class="fas fa-exclamation-circle"></i>
                   <small>Error message</small>
                 </div>
               </div>
@@ -153,15 +135,11 @@
                 <div class="input-container">
                   <label for="checkin">Check in</label>
                   <input type="date" id="checkinfield" name="checkin" />
-                  <i class="fas fa-check-circle"></i>
-                  <i class="fas fa-exclamation-circle"></i>
                   <small>Error message</small>
                 </div>
                 <div class="input-container">
                   <label for="checkout">Check Out</label>
                   <input type="date" id="checkoutfield" name="checkout" />
-                  <i class="fas fa-check-circle"></i>
-                  <i class="fas fa-exclamation-circle"></i>
                   <small>Error message</small>
                 </div>
               </div>
@@ -181,54 +159,43 @@
           </form>
         </div>
       </div>
-      <div class="lower-btns">
-        <div
-          class="registration-button btn"
-          role="button"
-          tabindex="0"
-          onclick="handleClick(event)"
-        >
-          <img src="./images/Group 37.png" alt="register" class="reg-img" />
-          <p>Book</p>
-        </div>
-        <div
-          class="scroll-btn btn"
-          id="book"
-          role="button"
-          tabindex="0"
-          onclick="handleClick(event)"
-        >
-          <img src="./images/Subtraction 2.png" alt="scroll" />
-        </div>
+      <div class="registration-button btn" role="button" tabindex="0">
+        <img src="./images/Group 37.png" alt="register" class="reg-img" />
+        <p>Book</p>
+      </div>
+      <div class="scroll-btn btn" id="book" role="button" tabindex="0">
+        <img src="./images/Subtraction 2.png" alt="scroll" />
       </div>
     </section>
     <main class="info">
-      <section class="description">
+      <section class="description info-content">
         <div class="text-side">
-          <div class="description-txt">
+          <div class="description-txt info-txt">
             <h3>Luxury Redefined</h3>
             <p>
-              At Seaside Haven, luxury isn’t just about grandeur — it’s the
+              At Seaside Haven, luxury isn't just about grandeur — it's the
               subtle art of comfort woven into every detail. From thoughtfully
               designed rooms with panoramic views to personalized service that
               anticipates your every need, here you experience elegance in its
               purest form. Indulge in moments that feel effortlessly refined,
               where sophistication meets the soothing rhythm of the sea.
             </p>
+            <div class="load-btn first-btn" role="button" tabindex="0">
+              Explore
+            </div>
           </div>
-          <div class="load-btn first-btn">Load more</div>
         </div>
-        <div class="description-imgs">
-          <img src="" alt="someimage" />
+        <div class="description-imgs info-imgs">
+          <img
+            src="./images/Gemini_Generated_Image_ov01beov01beov01.png"
+            alt="someimage"
+            class="info-img"
+          />
         </div>
-        <div class="extend"></div>
       </section>
-      <section class="usr-story">
-        <div class="usr-story-imgs">
-          <img src="" alt="someimage" />
-        </div>
+      <section class="usr-story info-content">
         <div class="text-side">
-          <div class="usr-story-txt">
+          <div class="usr-story-txt info-txt">
             <h3>A Place to Simply Be</h3>
             <p>
               We believe in slow mornings, salty air, and sunlit walks by the
@@ -237,18 +204,24 @@
               t'he sparkle of the sea or the stillness of the mountains, this
               place doesn't rush — and neither should you.
             </p>
+            <div class="load-btn second-btn btn" role="button" tabindex="0">
+              Explore
+            </div>
           </div>
-          <div class="load-btn second-btn btn">Load more</div>
         </div>
-        <div class="extend"></div>
+        <div class="usr-story-imgs info-imgs">
+          <img
+            src="./images/Gemini_Generated_Image_ww6dw1ww6dw1ww6d.jpg"
+            alt="someimage"
+            class="info-img"
+          />
+        </div>
       </section>
       <div class="endnote">
-        <h2>Testimonials</h2>
         <p>
           “Luxury doesn't have to be loud — Seaside Haven proves it. Quiet,
           warm, beautiful.”
         </p>
-        <h3>— Jonas M. Berlin</h3>
       </div>
     </main>
     <footer class="footer-wrap">
@@ -257,20 +230,24 @@
           <ul>
             <li>
               <p>
-                <i class="fa-solid fa-envelope"></i>:
-                <a href="mailto: example99@gmail.com">email</a>
+                <a href="mailto: #">
+                  <i class="fa-solid fa-envelope"></i> email</a
+                >
               </p>
             </li>
             <li>
               <p>
-                <i class="fa-solid fa-location-dot"></i>:
-                <a href="#">chavchavadze83, tbilisi, georgia</a>
+                <a href="#">
+                  <i class="fa-solid fa-location-dot"></i> chavchavadze83,
+                  tbilisi, georgia</a
+                >
               </p>
             </li>
             <li style="display: flex; flex-wrap: wrap">
               <p>
-                <i class="fa-solid fa-phone"></i>:
-                <a href="tell:123-456-789">123-456-789</a>
+                <a href="tell:123-456-789">
+                  <i class="fa-solid fa-phone"></i> n123-456-789</a
+                >
               </p>
             </li>
           </ul>

@@ -6,9 +6,8 @@ loginBtn.addEventListener("click", () => {
 
   const workForm = document.createElement("form");
   workForm.classList.add("login-fields");
-  workForm.id = "login-fields"
-  workForm.action = ""
-  
+  workForm.id = "login-fields";
+  workForm.action = "";
 
   const exitBtn = document.createElement("button");
   exitBtn.setAttribute("aria-label", "Close Login Form");
@@ -160,15 +159,17 @@ loginBtn.addEventListener("click", () => {
 
   function setErrorFor(wrapperDiv, inputEl, iconEl, smallEl, message) {
     smallEl.innerText = message;
-    inputEl.style.border = "1px solid red";
+    wrapperDiv.classList.add("error");
+    wrapperDiv.classList.remove("success");
     iconEl.style.visibility = "visible";
     iconEl.style.color = "red";
-    wrapperDiv.style.position = "relative";
   }
 
   function setSuccessFor(inputEl, iconEl, smallEl) {
+    const wrapperDiv = inputEl.closest(".form-control");
     smallEl.innerText = "";
-    inputEl.style.border = "1px solid green";
+    wrapperDiv.classList.remove("error");
+    wrapperDiv.classList.add("success");
     iconEl.style.visibility = "hidden";
   }
 

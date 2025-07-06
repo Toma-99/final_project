@@ -1,11 +1,20 @@
 .hero {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100); /* dynamic vh */
+  width: 100vw;
+  max-width: 100%;
   background-image: url("../images/background_image1st.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   color: white;
   padding-bottom: 100px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* added from second block */
+  padding: 0 5%;
+  box-sizing: border-box;
 }
 
 .header-wrapper {
@@ -17,6 +26,7 @@
   backdrop-filter: blur(5px);
   padding: 20px 5%;
   z-index: 1001;
+  transition: top 0.5s ease-in-out;
 }
 /* .logo {
     width: 200px;
@@ -54,7 +64,7 @@
 .burger-bar {
   width: 40px;
   height: 40px;
-  background-color: #000;
+  background-color: darkgoldenrod;
   border-radius: 50%;
   position: relative;
   display: none;
@@ -82,39 +92,52 @@
 }
 
 .welcome-txt {
-  width: 500px;
-  height: 200px;
+  width: 40%;
+  height: auto;
   padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
   top: 50%;
-  left: 50%;
+  left: 20%;
   position: absolute;
-  -ms-transform: translate(-90%, -50%);
-  transform: translate(-90%, -50%);
+  -ms-transform: translate(-20%, -50%);
+  transform: translate(-20%, -50%);
   display: block;
 }
-
-.lower-btns {
-  width: 80px;
-  height: 150px;
+.registration-button {
   position: absolute;
-  top: 65%;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
+  width: 135px;
+  height: 40px;
+  background: skyblue;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 25px;
+}
+.scroll-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 .pop-up-wrapper {
   position: absolute;
-  top: calc(50% + 25px);
+  top: calc(50% + 30px);
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
   width: 100%;
   max-width: 100vw;
-  max-height: 80vh;
+  max-height: calc(var(--vh, 0.6) * 100);
+  height: 90%;
   overflow-y: auto;
   padding: 20px;
   display: none;
@@ -133,12 +156,14 @@
   margin: 0 auto;
 }
 .scrollbar-container {
+  display: flex;
+  flex-direction: column;
   max-height: 350px;
   overflow-y: auto;
   padding-right: 10px;
   box-sizing: border-box;
+  gap: 20px;
 }
-
 .close-btn {
   position: absolute;
   top: 16px;
@@ -344,22 +369,23 @@ button[type="submit"]:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  width: 40%;
+  width: 30rem;
   max-width: 100vw;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.4); /* optional dimmed background */
+  background-color: white;
   justify-content: center;
   align-items: center;
   z-index: 9999;
   display: none;
+  border-radius: 10px;
+  color: #14274a;
 }
-
 .login-fields {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
 }
 
 .login-fields div {
@@ -384,12 +410,12 @@ button[type="submit"]:hover {
   background: transparent;
   font-size: 1.5rem;
   cursor: pointer;
-  color: white;
+  color: grey;
   transition: color 0.2s ease;
 }
 
 .close-btn:hover {
-  color: red;
+  color: silver;
 }
 
 .form-control {
@@ -462,6 +488,13 @@ button[type="submit"]:hover {
   right: 15px;
 }
 
+.login-form input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 200px;
+  height: 40px;
+}
+
 .form-control small {
   visibility: hidden;
   position: absolute;
@@ -489,6 +522,22 @@ button[type="submit"]:hover {
 }
 
 .registration-button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 135px;
+  height: 40px;
+  background: skyblue;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 25px;
+}
+
+.registration-button-lower {
   width: 135px;
   height: 40px;
   background: skyblue;
@@ -502,12 +551,13 @@ button[type="submit"]:hover {
 }
 
 .scroll-btn {
-  margin: 0 auto;
   position: absolute;
-  top: 80%;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
   cursor: pointer;
 }
-
 .rooms-slide {
   margin: 0 auto;
   margin-top: 3em;
@@ -570,10 +620,10 @@ button[type="submit"]:hover {
 
 .footer-wrap {
   width: 100%;
-  background-color: gainsboro;
+  background-color: skyblue;
+  background-repeat: repeat;
   margin-top: 3em;
 }
-
 .footer-out {
   width: 80%;
   margin: 0 auto;
@@ -581,9 +631,12 @@ button[type="submit"]:hover {
   justify-content: space-between;
 }
 
-.footer-sec {
-  margin: 3em 0;
-  padding: 0 2em;
+.footer-out {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-sec li {
@@ -595,6 +648,7 @@ button[type="submit"]:hover {
   margin: 0 auto;
   height: auto;
   padding: 20px;
+  transition: 0.3s;
 }
 
 .room-facilities ul {
@@ -611,4 +665,192 @@ button[type="submit"]:hover {
   height: 200px;
   object-fit: inherit;
   border-radius: 5px;
+  margin: 0 auto;
+}
+
+.login-btn:hover,
+.load-btn:hover,
+.registration-button:hover,
+.registration-button-lower:hover,
+button[type="submit"]:hover,
+.first-btn:hover {
+  background-color: goldenrod;
+  color: white;
+  transform: scale(1.03);
+  transition: all 0.2s ease;
+}
+a:hover {
+  color: #fff8dc;
+  text-decoration: underline;
+  transition: 0.3s ease;
+}
+.footer-wrap a:hover {
+  color: #fff8dc;
+}
+
+.header-wrapper a:hover {
+  color: #fff8dc;
+}
+.ul-elements a {
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.ul-elements a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background: #f0c040;
+  transition: width 0.3s ease;
+}
+
+.ul-elements a:hover::after {
+  width: 100%;
+}
+.room-content:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+.footer-sec i:hover {
+  color: white;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+.roomimg:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 980px) {
+  .scroll-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 885px) {
+  .navigation {
+    display: none;
+  }
+  .login-btn {
+    display: none;
+  }
+  .burger-bar {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="date"],
+  input[type="password"],
+  select {
+    width: 180px;
+  }
+  .welcome-txt {
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -35%);
+    width: 60%;
+  }
+  .login-wrap {
+    width: 300px;
+    height: auto;
+    justify-content: center;
+    top: calc(50%);
+  }
+  .scrollbar-container {
+    height: 100%;
+  }
+  .load-btn {
+    width: 300px;
+  }
+  .welcome-txt p {
+    display: none;
+  }
+  .welcome-txt {
+    background: none;
+  }
+  .outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-sec a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-out,
+  .footer-sec ul,
+  .footer-sec li,
+  .footer-sec p,
+  .footer-sec a {
+    text-align: center;
+    width: 100%;
+  }
+  .room-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-right: none;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .room-img {
+    justify-content: center;
+    align-items: center;
+  }
+  .room-desc {
+    align-items: center;
+  }
+  .line1 {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .room-img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 635px) {
+  .footer-sec i {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 480px) {
+  .room-btns {
+    flex-direction: column;
+  }
+  .first-btn,
+  .registration-button-lower {
+    width: 250px;
+  }
+}
+
+@media (max-width: 375px) {
+  .room-img {
+    width: 100%;
+  }
+  .roomimg {
+    display: block;
+    margin: 0 auto;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 335px) {
+  .room-img {
+    padding: none;
+  }
 }
