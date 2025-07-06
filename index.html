@@ -9,12 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://fonts.google.com/selection" />
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script src="scripts/booking.js" defer></script>
     <script src="./scripts/login.js" defer></script>
     <script src="./scripts/scripts.js" defer></script>
@@ -43,6 +39,26 @@
           <div class="lower"></div>
         </div>
       </div>
+      <nav class="mobile-nav-slide" id="mobileMenu">
+        <button
+          class="close-mobile"
+          id="closeMobileMenu"
+          aria-label="Close Menu"
+        >
+          &times;
+        </button>
+        <ul class="mobile-ul">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about_us.html">About Us</a></li>
+          <li><a href="./rooms.html">Rooms</a></li>
+          <li><a href="./contact_us.html">Contact Us</a></li>
+          <li>
+            <div class="login-btn-second btn" role="button" tabindex="0">
+              Log In
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
     <section class="hero">
       <div class="welcome-txt">
@@ -277,6 +293,13 @@
             <li><a href="">Provacy and policy</a></li>
           </ul>
         </div>
+      </div>
+      <div class="cookie-notice" id="cookie-notice">
+        <button class="close-cookies" aria-label="Close cookies Form">
+          &times;
+        </button>
+        <p>Website uses cookies for better user-experience</p>
+        <button type="submit" id="acceptCookies">Accept</button>
       </div>
     </footer>
   </body>

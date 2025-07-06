@@ -9,14 +9,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <script src="./scripts/script.js" defer></script>
+    <script src="./scripts/scripts.js" defer></script>
     <script src="./scripts/contact.js" defer></script>
+    <script src="./scripts/login.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <header class="header-wrapper">
       <div class="header-elements">
-        <a href="./index.html"><img src="" alt="logo" /></a>
+        <a href="./index.html"
+          ><img src="./images/logo.png" alt="logo" class="logo-wrap"
+        /></a>
         <nav class="navigation">
           <ul class="ul-elements">
             <li><a href="./index.html">Home</a></li>
@@ -25,23 +28,47 @@
             <li><a href="./contact_us.html">Contact Us</a></li>
           </ul>
         </nav>
-        <div class="login-btn">Log In</div>
-        <div class="burger-bar">
+        <div class="login-btn btn" id="login-btn" role="button" tabindex="0">
+          Log In
+        </div>
+        <div class="burger-bar" role="button" tabindex="0">
           <div class="upper"></div>
           <div class="mid"></div>
           <div class="lower"></div>
         </div>
       </div>
+      <nav class="mobile-nav-slide" id="mobileMenu">
+        <button
+          class="close-mobile"
+          id="closeMobileMenu"
+          aria-label="Close Menu"
+        >
+          &times;
+        </button>
+        <ul class="mobile-ul">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about_us.html">About Us</a></li>
+          <li><a href="./rooms.html">Rooms</a></li>
+          <li><a href="./contact_us.html">Contact Us</a></li>
+          <li>
+            <div class="login-btn-second btn" role="button" tabindex="0">
+              Log In
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
     <section class="hero-last">
       <div class="contact-welcome">
-        <p>
+        <h1 class="contact-header">Contact Info</h1>
+        <p class="big">
           Whether you're planning your stay, have a question, or simply want to
           say hello — we're here for you. Reach out to our team anytime and
           we'll make sure you feel welcome, heard, and cared for. At Seaside
           Haven, connection begins before you even arrive.
         </p>
       </div>
+      <div class="login-wrap" id="login"></div>
     </section>
     <main class="support-wrap">
       <div class="welcome-support-txt">
@@ -57,10 +84,20 @@
       <div class="main-support">
         <div class="main-addresses">
           <ul>
-            <li>chavchavadze83, tbiilisi, georgia</li>
-            <li><a href="">On map</a></li>
-            <li><a href="tell:123-456-789">call</a></li>
-            <li><a href="mailto:example99@gmail.com">mail</a></li>
+            <li>Chavchavadze 83, Tbiilisi, Georgia</li>
+            <li>
+              <a href=""><i class="fa-solid fa-location-pin"></i>On Map</a>
+            </li>
+            <li>
+              <a href="tell:123-456-789"
+                ><i class="fa-solid fa-mobile"></i>Call</a
+              >
+            </li>
+            <li>
+              <a href="mailto:example99@gmail.com"
+                ><i class="fa-solid fa-envelope"></i>Mail</a
+              >
+            </li>
           </ul>
         </div>
         <div class="help-forms">
@@ -118,13 +155,26 @@
         <div class="footer-sec first">
           <ul>
             <li>
-              <p>email:<a href="mailto: example99@gmail.com">example99</a></p>
+              <p>
+                <a href="mailto: example99@gmail.com">
+                  <i class="fa-solid fa-envelope"></i> email</a
+                >
+              </p>
             </li>
             <li>
-              <p>Address:<a href="#">chavchavadze83, tbilisi, georgia</a></p>
+              <p>
+                <a href="#">
+                  <i class="fa-solid fa-location-dot"></i> chavchavadze83,
+                  tbilisi, georgia</a
+                >
+              </p>
             </li>
             <li style="display: flex; flex-wrap: wrap">
-              <p>Phone:<a href="tell:123-456-789">123-456-789</a></p>
+              <p>
+                <a href="tell:123-456-789">
+                  <i class="fa-solid fa-phone"></i> 123-456-789</a
+                >
+              </p>
             </li>
           </ul>
         </div>

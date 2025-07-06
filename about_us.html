@@ -6,29 +6,56 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/about_us.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.google.com/selection" />
     <script src="scripts/booking.js" defer></script>
     <script src="./scripts/scripts.js" defer></script>
+    <script src="./scripts/login.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-      <header class="header-wrapper">
-        <div class="header-elements">
-            <a href="./index.html"><img src="/images/logo.png" alt="logo" class="logo-wrap"></a>
-            <nav class="navigation">
-                <ul class="ul-elements">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about_us.html">About Us</a></li>
-                    <li><a href="./rooms.html">Rooms</a></li>
-                    <li><a href="./contact_us.html">Contact Us</a></li>
-                </ul>
-            </nav>
-            <div class="login-btn">Log In</div>
-            <div class="burger-bar">
-                <div class="upper"></div>
-                <div class="mid"></div>
-                <div class="lower"></div>
-            </div>
-        </div>
+  <header class="header-wrapper">
+    <div class="header-elements">
+      <a href="./index.html"
+        ><img src="./images/logo.png" alt="logo" class="logo-wrap"
+      /></a>
+      <nav class="navigation">
+        <ul class="ul-elements">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about_us.html">About Us</a></li>
+          <li><a href="./rooms.html">Rooms</a></li>
+          <li><a href="./contact_us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="login-btn btn" id="login-btn" role="button" tabindex="0">
+        Log In
+      </div>
+      <div class="burger-bar" role="button" tabindex="0">
+        <div class="upper"></div>
+        <div class="mid"></div>
+        <div class="lower"></div>
+      </div>
+    </div>
+    <nav class="mobile-nav-slide" id="mobileMenu">
+      <button
+        class="close-mobile"
+        id="closeMobileMenu"
+        aria-label="Close Menu"
+      >
+        &times;
+      </button>
+      <ul class="mobile-ul">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about_us.html">About Us</a></li>
+        <li><a href="./rooms.html">Rooms</a></li>
+        <li><a href="./contact_us.html">Contact Us</a></li>
+        <li>
+          <div class="login-btn-second btn" role="button" tabindex="0">
+            Log In
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
     </header>
         <section class="hero">
         <div class="welcome-txt">
@@ -39,6 +66,7 @@
 
             </p>
         </div>
+        <div class="login-wrap" id="login"></div>
         <div class="pop-up-wrapper">
           <div class="pop-up">
             <button class="close-btn" aria-label="Close Booking Form">
@@ -178,7 +206,6 @@
           </div>
         </div>
     </div>
-        <div class="lower-btns">
             <div class="registration-button">
                 <img src="./images/Group 37.png" alt="register" class="reg-img">
                 <p>Book</p>
@@ -186,7 +213,6 @@
             <div class="scroll-btn">
                 <img src="./images/Subtraction 2.png" alt="scroll">
             </div>
-        </div>
     </section>
 
     <main class="about-info">
@@ -200,12 +226,10 @@
                 <p>We are a small, independent hotel — and we wear that with pride. Our team is local, passionate, and deeply committed to making your stay exceptional. Whether it's recommending a hidden beach cove, preparing a sunset dinner, or simply making sure your morning coffee is just the way you like it, we're here to make your time with us feel effortless.</p>
                 <p>Come experience life by the sea — where mornings are slow, evenings are golden, and every moment is made to be savored.</p>
             </div>
-            <div class="hitory-imgs">
+            <div class="history-imgs">
                 <ul>
-                    <li><img src="" alt="img1"></li>
-                    <li><img src="" alt="img2"></li>
-                    <li><img src="" alt="img2"></li>
-                    <li><img src="" alt="img2"></li>
+                    <li><img src="./images/images.jpg" alt="img2" class="about-imgs"></li>
+                    <li><img src="./images/HFS_1190_aspect16x9.jpg" alt="img2" class="about-imgs"></li>
                 </ul>
             </div>
         
@@ -213,7 +237,7 @@
       <section class="staff">
         <div class="staff-inf">
             <h2>Our Staff - The Heart of Seaside Haven</h2>
-            <img src="" alt="photos">
+            <img src="./images/download (2).jpg" alt="photos" class="about-imgs">
             <p>At Seaside Haven, our people are the soul of everything we do.
             </p>
             <p>Each member of our team brings more than just experience — they bring heart, care, and a shared passion for hospitality. From the moment you arrive, you'll feel it: the smiles are genuine, the service is thoughtful, and every gesture comes from a place of pride in what we've created.</p>
@@ -224,12 +248,10 @@
         </div>
       </section>
                 <div class="endnote">
-                  <h2>Testimonials</h2>
                   <p>
                     “Luxury doesn't have to be loud — Seaside Haven proves it. Quiet,
                     warm, beautiful.”
                   </p>
-                  <h3>— Jonas M. Berlin</h3>
         </div>
 
     </main>
@@ -239,20 +261,17 @@
           <ul>
             <li>
               <p>
-                <i class="fa-solid fa-envelope"></i>:
-                <a href="mailto: example99@gmail.com">email</a>
+                <a href="mailto: example99@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
               </p>
             </li>
             <li>
               <p>
-                <i class="fa-solid fa-location-dot"></i>:
-                <a href="#">chavchavadze83, tbilisi, georgia</a>
+                <a href="#"><i class="fa-solid fa-location-dot"></i> Chavchavadze83, Tbilisi, Georgia</a>
               </p>
             </li>
             <li style="display: flex; flex-wrap: wrap">
               <p>
-                <i class="fa-solid fa-phone"></i>:
-                <a href="tell:123-456-789">123-456-789</a>
+                <a href="tell:123-456-789"><i class="fa-solid fa-phone"></i> 123-456-789</a>
               </p>
             </li>
           </ul>

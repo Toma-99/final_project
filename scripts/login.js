@@ -32,8 +32,6 @@ loginBtn.addEventListener("click", () => {
   emailInput.classList.add("email");
 
   const emailIcon = document.createElement("i");
-  emailIcon.classList.add("fa-solid", "fa-exclamation");
-  emailIcon.style.visibility = "hidden";
 
   const emailError = document.createElement("small");
   emailError.innerHTML = "";
@@ -55,8 +53,6 @@ loginBtn.addEventListener("click", () => {
   passInput.classList.add("password");
 
   const passIcon = document.createElement("i");
-  passIcon.classList.add("fa-solid", "fa-exclamation");
-  passIcon.style.visibility = "hidden";
 
   const showPass = document.createElement("i");
   showPass.classList.add("far", "fa-eye");
@@ -184,3 +180,5 @@ loginBtn.addEventListener("click", () => {
     hidePass.style.visibility = isHidden ? "visible" : "hidden";
   }
 });
+
+let cookieaccpted = false;

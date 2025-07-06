@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://fonts.google.com/selection" />
     <script src="scripts/booking.js" defer></script>
     <script src="./scripts/login.js" defer></script>
     <script src="./scripts/rooms.js" defer></script>
@@ -19,7 +20,7 @@
     <header class="header-wrapper">
       <div class="header-elements">
         <a href="./index.html"
-          ><img src="./images/" alt="logo" class="logo-wrap"
+          ><img src="./images/logo.png" alt="logo" class="logo-wrap"
         /></a>
         <nav class="navigation">
           <ul class="ul-elements">
@@ -44,6 +45,26 @@
           <div class="lower"></div>
         </div>
       </div>
+      <nav class="mobile-nav-slide" id="mobileMenu">
+        <button
+          class="close-mobile"
+          id="closeMobileMenu"
+          aria-label="Close Menu"
+        >
+          &times;
+        </button>
+        <ul class="mobile-ul">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about_us.html">About Us</a></li>
+          <li><a href="./rooms.html">Rooms</a></li>
+          <li><a href="./contact_us.html">Contact Us</a></li>
+          <li>
+            <div class="login-btn-second btn" role="button" tabindex="0">
+              Log In
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
     <section class="hero">
       <div class="welcome-txt">
@@ -228,8 +249,10 @@
               <div class="room-facilities"></div>
             </div>
             <div class="room-btns">
-              <div class="first-btn" role="button" tabindex="0">Facilities</div>
-              <div class="registration-button-lower">
+              <div class="first-btn content-btn" role="button" tabindex="0">
+                Facilities
+              </div>
+              <div class="registration-button-lower content-btn">
                 <img
                   src="./images/Group 37.png"
                   alt="register"
@@ -262,11 +285,13 @@
                 modi esse voluptas ut, incidunt mollitia inventore illum optio
                 ipsa ipsum?
               </p>
-              <div class="room-facilities"></div>
+              <div class="room-facilities content-btn"></div>
             </div>
             <div class="room-btns">
-              <div class="first-btn" role="button" tabindex="0">Facilities</div>
-              <div class="registration-button-lower">
+              <div class="first-btn content-btn" role="button" tabindex="0">
+                Facilities
+              </div>
+              <div class="registration-button-lower content-btn">
                 <img
                   src="./images/Group 37.png"
                   alt="register"
@@ -302,8 +327,10 @@
               <div class="room-facilities"></div>
             </div>
             <div class="room-btns">
-              <div class="first-btn" role="button" tabindex="0">Facilities</div>
-              <div class="registration-button-lower">
+              <div class="first-btn content-btn" role="button" tabindex="0">
+                Facilities
+              </div>
+              <div class="registration-button-lower content-btn">
                 <img
                   src="./images/Group 37.png"
                   alt="register"
@@ -339,8 +366,10 @@
               <div class="room-facilities"></div>
             </div>
             <div class="room-btns">
-              <div class="first-btn" role="button" tabindex="0">Facilities</div>
-              <div class="registration-button-lower">
+              <div class="first-btn content-btn" role="button" tabindex="0">
+                Facilities
+              </div>
+              <div class="registration-button-lower content-btn">
                 <img
                   src="./images/Group 37.png"
                   alt="register"
@@ -359,20 +388,24 @@
           <ul>
             <li>
               <p>
-                <i class="fa-solid fa-envelope"></i>:
-                <a href="mailto: example99@gmail.com">email</a>
+                <a href="mailto: example99@gmail.com">
+                  <i class="fa-solid fa-envelope"></i> email</a
+                >
               </p>
             </li>
             <li>
               <p>
-                <i class="fa-solid fa-location-dot"></i>:
-                <a href="#">chavchavadze83, tbilisi, georgia</a>
+                <a href="#">
+                  <i class="fa-solid fa-location-dot"></i> chavchavadze83,
+                  tbilisi, georgia</a
+                >
               </p>
             </li>
             <li style="display: flex; flex-wrap: wrap">
               <p>
-                <i class="fa-solid fa-phone"></i>:
-                <a href="tell:123-456-789">123-456-789</a>
+                <a href="tell:123-456-789">
+                  <i class="fa-solid fa-phone"></i> 123-456-789</a
+                >
               </p>
             </li>
           </ul>

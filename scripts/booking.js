@@ -40,32 +40,32 @@ function checkInputs() {
 
   // --- Name Validation ---
   if (!nameValue) {
-    setErrorFor(username, "Name cannot be blank");
+    setErrorFor(username, "Name can't be blank");
   } else {
     setSuccessFor(username);
   }
 
   // --- Surname Validation ---
   if (!surnameValue) {
-    setErrorFor(surname, "Surname cannot be blank");
+    setErrorFor(surname, "Surname can't be blank");
   } else {
     setSuccessFor(surname);
   }
 
   // --- Phone Number Validation ---
   if (!telValue) {
-    setErrorFor(tel, "Phone number cannot be blank");
+    setErrorFor(tel, "Phone number can't be blank");
   } else if (!isValidnumber(telValue)) {
-    setErrorFor(tel, "Phone number must be exactly 10 digits");
+    setErrorFor(tel, "Must be 11 digits");
   } else if (telValue.length !== 10) {
-    setErrorFor(tel, "Phone number length must be 10 digits");
+    setErrorFor(tel, "Must be 11 digits");
   } else {
     setSuccessFor(tel);
   }
 
   // --- Email Validation ---
   if (!emailValue) {
-    setErrorFor(email, "Email cannot be blank");
+    setErrorFor(email, "Email can't be blank");
   } else if (!isValidEmail(emailValue)) {
     setErrorFor(email, "Email is not valid");
   } else {
@@ -74,10 +74,10 @@ function checkInputs() {
 
   // --- Persons Validation ---
   if (!perValue) {
-    setErrorFor(persons, "Number of persons cannot be blank");
+    setErrorFor(persons, "Number of persons can't be blank");
   } else if (Number(perValue) < 1) {
     // Ensure it's a number and greater than 0
-    setErrorFor(persons, "Number of persons cannot be less than 1");
+    setErrorFor(persons, "Number Can't be less then 1");
   } else {
     setSuccessFor(persons);
   }
@@ -94,18 +94,18 @@ function checkInputs() {
 
   // --- Check-in Date Validation ---
   if (!checkinValue) {
-    setErrorFor(checkin, "Check-in date cannot be blank");
+    setErrorFor(checkin, "Date cannot be blank");
   } else if (checkinDate < today) {
-    setErrorFor(checkin, "Check-in date cannot be in the past");
+    setErrorFor(checkin, "Date can't be past");
   } else {
     setSuccessFor(checkin);
   }
 
   // --- Check-out Date Validation ---
   if (!checkoutValue) {
-    setErrorFor(checkout, "Check-out date cannot be blank");
+    setErrorFor(checkout, "Date can't be blank");
   } else if (checkoutDate <= checkinDate) {
-    setErrorFor(checkout, "Check-out date must be after check-in date");
+    setErrorFor(checkout, "Must be after the check-in date");
   } else {
     setSuccessFor(checkout);
   }
@@ -146,6 +146,6 @@ const isValidEmail = (email) => {
 
 // --- Phone Number Regex Validation
 const isValidnumber = (tel) => {
-  const numReg = /^\d{10}$/; // This regex ensures exactly 10 digits
+  const numReg = /^\d{11}$/;
   return numReg.test(tel);
 };
